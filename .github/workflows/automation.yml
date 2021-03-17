@@ -12,7 +12,7 @@ on:
     - master
 
 jobs:
-  updateKeyword:
+  about:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,7 +24,7 @@ jobs:
           direction: overwrite-github # default is overwrite-file
           githubToken: ${{ secrets.GITHUB }}
   
-  ci:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -64,4 +64,4 @@ jobs:
         with:
           aws-key-id: ${{ secrets.AWSACCESSKEYID }}
           aws-access-key: ${{ secrets.AWSSECERTACCESSKEY }}
-          source: './dist/CoCreate-boilerplate.min.js'
+          source: './dist/CoCreate-resize.min.js'
