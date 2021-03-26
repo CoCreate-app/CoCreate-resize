@@ -50,3 +50,56 @@ div[data-resize_handle='bottom'] {
     z-index: 90;
     background-color: #55aa55;
 }
+
+div.resize>div.resizeleft {
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    cursor: e-resize;
+    width: 4px;
+    left: 0px;
+    top: 0;
+    height: 100%;
+    z-index: 90;
+    background-color: #55aa55;
+}
+
+div.resize>div.resizeright {
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    cursor: e-resize;
+    width: 4px;
+    right: 0px;
+    top: 0;
+    height: 100%;
+    z-index: 90;
+    background-color: #55aa55;
+}
+
+div.resize>div.resizetop {
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    cursor: s-resize;
+    height: 4px;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 90;
+    background-color: #55aa55;
+    touch-action: auto;
+}
+
+div.resize>div.resizebottom {
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    cursor: s-resize;
+    height: 4px;
+    width: 100%;
+    bottom: 0px;
+    left: 0;
+    z-index: 90;
+    background-color: #55aa55;
+}
