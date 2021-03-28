@@ -9,7 +9,7 @@ module.exports = {
     sources: [{
             path: "./docs/index.html",
             collection: "files",
-            document_id: "",
+            document_id: "605cfda762701d3ec9de8ff8",
             key: "html",
             data:{
                 name: "Resize Doc",
@@ -19,10 +19,10 @@ module.exports = {
    
     crud: [{
             collection: "routes",
-            document_id: "",
+            document_id: "605cfda762701d3ec9de8ff7",
             data:{
                 collection: "files",
-                document_id: "",
+                document_id: "605cfda762701d3ec9de8ff8",
                 name: "html",
                 domains: ["cocreate.app", "server.cocreate.app", "ws.cocreate.app"],
                 route: "/docs/resize",
