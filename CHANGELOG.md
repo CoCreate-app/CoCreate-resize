@@ -1,3 +1,11 @@
+# 1.0.0 (2021-03-29)
+
+
+### Features
+
+* Initial Release ([ab4e569](https://github.com/CoCreate-app/CoCreate-resize/commit/ab4e5690549784ef3987ab4e89cc249349a6d1ba))
+* Initial Release ([0dff655](https://github.com/CoCreate-app/CoCreate-resize/commit/0dff655291a5878832f43f503d651206d3a22b78))
+
 # [1.1.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.2...v1.1.0) (2021-03-17)
 
 
