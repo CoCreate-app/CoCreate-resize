@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+	
+	<!--<link rel="stylesheet" href="https://server.cocreate.app/CoCreateJS/dist/CoCreate.css" defer type="text/css" />-->
     <title>Resize</title>
     <style>
         body {
@@ -55,11 +57,11 @@
         <div data-resize_handle="bottom"></div>
     </div> -->
 
-    <div class="newresize resize2">
-        <div data-resize_handle="left"></div>
-        <div data-resize_handle="right"></div>
-        <div data-resize_handle="top"></div>
-        <div data-resize_handle="bottom"></div>
+    <div class="resize resize2">
+        <div data-resize="left"></div>
+        <div data-resize="right"></div>
+        <div data-resize="top"></div>
+        <div data-resize="bottom"></div>
     </div>
     <div class="resize resize3">
         <div class="resizeleft"></div>
@@ -76,8 +78,18 @@
             // host: 'wss://ws.cocreate.app'
         }
     </script>
+	
+	<!--<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>-->
     <script src="../dist/CoCreate-resize.js"></script>
     <script>
+        CoCreateResize.init({
+    selector: ".resize",
+    dragLeft: "[data-resize='left']",
+    dragRight: "[data-resize='right']",
+    dragTop: "[data-resize='top']",
+    dragBottom: "[data-resize='bottom']",
+});
+
         // CoCreateResize.init({
         //     selector: ".resize",
         //     dragLeft: "[data-resize_handle='left']",
@@ -85,20 +97,20 @@
         //     dragTop: "[data-resize_handle='top']",
         //     dragBottom: "[data-resize_handle='bottom']",
         // });
-        CoCreateResize.init({
-            selector: ".newresize",
-            dragLeft: "[data-resize_handle='left']",
-            dragRight: "[data-resize_handle='right']",
-            dragTop: "[data-resize_handle='top']",
-            dragBottom: "[data-resize_handle='bottom']",
-        });
-        CoCreateResize.init({
-            selector: ".resize3",
-            dragLeft: ".resizeleft",
-            dragRight: ".resizeright",
-            dragTop: ".resizetop",
-            dragBottom: ".resizebottom",
-        });
+        // CoCreateResize.init({
+        //     selector: ".newresize",
+        //     dragLeft: "[data-resize_handle='left']",
+        //     dragRight: "[data-resize_handle='right']",
+        //     dragTop: "[data-resize_handle='top']",
+        //     dragBottom: "[data-resize_handle='bottom']",
+        // });
+        // CoCreateResize.init({
+        //     selector: ".resize3",
+        //     dragLeft: ".resizeleft",
+        //     dragRight: ".resizeright",
+        //     dragTop: ".resizetop",
+        //     dragBottom: ".resizebottom",
+        // });
     </script>
 </body>
 

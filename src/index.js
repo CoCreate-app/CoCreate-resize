@@ -1,6 +1,7 @@
-"use strict";
-import "./style.css";
+// "use strict";
 import observer from "@cocreate/observer";
+import "./style.css";
+
 
 const coCreateResizeWidgets = {
     selector: '', //'.resize',
@@ -425,5 +426,13 @@ observer.init({
         coCreateResizeWidgets.initElement(mutation.target);
     }
 })
+// CoCreateResize.init({
+//     selector: "* [data-resize]",
+//     dragLeft: "[data-resize='left']",
+//     dragRight: "[data-resize='right']",
+//     dragTop: "[data-resize='top']",
+//     dragBottom: "[data-resize='bottom']",
+// });
+
 
 export default coCreateResizeWidgets;
