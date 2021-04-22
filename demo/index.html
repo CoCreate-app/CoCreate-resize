@@ -82,13 +82,13 @@
 	<!--<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>-->
     <script src="../dist/CoCreate-resize.js"></script>
     <script>
-        CoCreateResize.init({
-    selector: ".resize",
-    dragLeft: "[data-resize='left']",
-    dragRight: "[data-resize='right']",
-    dragTop: "[data-resize='top']",
-    dragBottom: "[data-resize='bottom']",
-});
+        CoCreateResize.initElement({
+            selector: ".resize",
+            dragLeft: "[data-resize='left']",
+            dragRight: "[data-resize='right']",
+            dragTop: "[data-resize='top']",
+            dragBottom: "[data-resize='bottom']",
+        });
 
         // CoCreateResize.init({
         //     selector: ".resize",
@@ -104,7 +104,7 @@
         //     dragTop: "[data-resize_handle='top']",
         //     dragBottom: "[data-resize_handle='bottom']",
         // });
-        // CoCreateResize.init({
+        // CoCreateResize.initElement({
         //     selector: ".resize3",
         //     dragLeft: ".resizeleft",
         //     dragRight: ".resizeright",

@@ -2,36 +2,6 @@
 import observer from "@cocreate/observer";
 import "./style.css";
 
-
-const coCreateResizeWidgets = {
-    selector: '', //'.resize',
-    resizers: [],
-    resizeWidgets: [],
-
-    init: function(handleObj) {
-        for (var handleKey in handleObj)
-            if (handleObj.hasOwnProperty(handleKey) && handleKey == 'selector')
-                this.selector = handleObj[handleKey];
-
-        this.resizers = document.querySelectorAll(this.selector);
-        var _this = this;
-        this.resizers.forEach(function(resize, idx) {
-            let resizeWidget = new CoCreateResize(resize, handleObj);
-            _this.resizeWidgets[idx] = resizeWidget;
-        })
-    },
-
-    initElement: function(target) {
-        let resizeWidget = new CoCreateResize(target, {
-            dragLeft: "[data-resize_handle='left']",
-            dragRight: "[data-resize_handle='right']",
-            dragTop: "[data-resize_handle='top']",
-            dragBottom: "[data-resize_handle='bottom']"
-        });
-        this.resizeWidgets[0] = resizeWidget;
-    }
-}
-
 function CoCreateResize(resizer, options) {
     this.resizeWidget = resizer;
     this.cornerSize = 10;
@@ -418,21 +388,27 @@ CoCreateResize.prototype = {
     }
 }
 
+CoCreateResize.initElement = function(handleObj){
+    let selector = '';
+    for (var handleKey in handleObj)
+            if (handleObj.hasOwnProperty(handleKey) && handleKey == 'selector')
+            selector = handleObj[handleKey];
+
+    let resizers = document.querySelectorAll(selector);
+
+    resizers.forEach(function(resize, idx) {
+        new CoCreateResize(resize, handleObj);
+    })
+}
+
 observer.init({
     name: 'CoCreateResize',
     observe: ['subtree', 'childList'],
     include: '.resize',
     callback: function(mutation) {
-        coCreateResizeWidgets.initElement(mutation.target);
+        CoCreateResize.initElement(mutation.target);
     }
 })
-// CoCreateResize.init({
-//     selector: "* [data-resize]",
-//     dragLeft: "[data-resize='left']",
-//     dragRight: "[data-resize='right']",
-//     dragTop: "[data-resize='top']",
-//     dragBottom: "[data-resize='bottom']",
-// });
 
 
-export default coCreateResizeWidgets;
+export default CoCreateResize;
