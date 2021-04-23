@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.2...v1.0.3) (2021-04-23)
+
+
+### Bug Fixes
+
+* readme and documentation. Removed securitykeys ([3255e5e](https://github.com/CoCreate-app/CoCreate-resize/commit/3255e5e1f808004a0eb46ced80a07a91c14743f8))
+
 ## [1.0.2](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.1...v1.0.2) (2021-04-19)
 
 
