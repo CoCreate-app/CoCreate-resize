@@ -3,7 +3,7 @@ import observer from "@cocreate/observer";
 import "./style.css";
 
 
-const coCreateResizeWidgets = {
+const coCreateResize = {
     selector: '', //'.resize',
     resizers: [],
     resizeWidgets: [],
@@ -423,7 +423,7 @@ observer.init({
     observe: ['subtree', 'childList'],
     include: '.resize',
     callback: function(mutation) {
-        coCreateResizeWidgets.initElement(mutation.target);
+        coCreateResize.initElement(mutation.target);
     }
 })
 // CoCreateResize.init({
@@ -435,4 +435,4 @@ observer.init({
 // });
 
 
-export default coCreateResizeWidgets;
+export default coCreateResize;
