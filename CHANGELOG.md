@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.3...v1.0.4) (2021-04-27)
+
+
+### Bug Fixes
+
+* Update to readme, demo, added cdn scripts ([9ca70cb](https://github.com/CoCreate-app/CoCreate-resize/commit/9ca70cbe2164d4fb16e4460c2b2b66565857fd31))
+
 ## [1.0.3](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.2...v1.0.3) (2021-04-23)
 
 
