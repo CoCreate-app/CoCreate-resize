@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.4...v1.0.5) (2021-04-27)
+
+
+### Bug Fixes
+
+* add host in docs ([62ceb15](https://github.com/CoCreate-app/CoCreate-resize/commit/62ceb152d9e983af72de0ab2c7aa10932d1859a4))
+
 ## [1.0.4](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.3...v1.0.4) (2021-04-27)
 
 
