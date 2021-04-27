@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resize | CoCreateJS</title>
+    
+    <!-- CoCreate Favicon -->
     <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-	
-	<!--<link rel="stylesheet" href="https://server.cocreate.app/CoCreateJS/dist/CoCreate.css" defer type="text/css" />-->
-    <title>Resize</title>
+    <!-- CoCreate CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.cocreate.app/resize/latest/CoCreate-resize.min.css" type="text/css" />
+    <!-- Custom CSS -->
     <style>
         body {
             height: 100vh;
@@ -46,16 +45,7 @@
         }
     </style>
 </head>
-
 <body>
-
-    <!-- <div class="resize resize1">
-        <iframe style="width: 100%; height: 100%;"></iframe>
-        <div data-resize_handle="left"></div>
-        <div data-resize_handle="right"></div>
-        <div data-resize_handle="top"></div>
-        <div data-resize_handle="bottom"></div>
-    </div> -->
 
     <div class="resize resize2">
         <div data-resize="left"></div>
@@ -77,40 +67,9 @@
             // host: 'wss://ws.cocreate.app'
         }
     </script>
-	
-	<!--<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>-->
-    <script src="../dist/CoCreate-resize.js"></script>
-    <script>
-        CoCreateResize.init({
-            selector: ".resize",
-            dragLeft: "[data-resize='left']",
-            dragRight: "[data-resize='right']",
-            dragTop: "[data-resize='top']",
-            dragBottom: "[data-resize='bottom']",
-        });
-
-        // CoCreateResize.init({
-        //     selector: ".resize",
-        //     dragLeft: "[data-resize_handle='left']",
-        //     dragRight: "[data-resize_handle='right']",
-        //     dragTop: "[data-resize_handle='top']",
-        //     dragBottom: "[data-resize_handle='bottom']",
-        // });
-        // CoCreateResize.init({
-        //     selector: ".newresize",
-        //     dragLeft: "[data-resize_handle='left']",
-        //     dragRight: "[data-resize_handle='right']",
-        //     dragTop: "[data-resize_handle='top']",
-        //     dragBottom: "[data-resize_handle='bottom']",
-        // });
-        // CoCreateResize.init({
-        //     selector: ".resize3",
-        //     dragLeft: ".resizeleft",
-        //     dragRight: ".resizeright",
-        //     dragTop: ".resizetop",
-        //     dragBottom: ".resizebottom",
-        // });
-    </script>
+    
+    <!-- CoCreate JS CDN -->
+    <script src="https://cdn.cocreate.app/resize/latest/CoCreate-resize.min.js" ></script>
 </body>
 
 </html>
