@@ -10,7 +10,7 @@ module.exports = {
             "path": "./docs/index.html",
             "collection": "files",
             "document_id": "605cfda762701d3ec9de8ff8",
-            "key": "html",
+            "key": "src",
             "data":{
                 "name": "resize Doc",
                 "domains": ["cocreate.app", "server.cocreate.app", "ws.cocreate.app"],
