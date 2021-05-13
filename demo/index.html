@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Resize | CoCreateJS</title>
-    
+
     <!-- CoCreate Favicon -->
     <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
     <!-- CoCreate CSS CDN -->
@@ -13,7 +14,7 @@
             height: 100vh;
             margin: 0px;
         }
-        
+
         .resize1 {
             top: 50px;
             left: 50px;
@@ -23,7 +24,7 @@
             position: absolute;
             background: #dddddd;
         }
-        
+
         .resize2 {
             top: 150px;
             left: 150px;
@@ -33,7 +34,7 @@
             position: absolute;
             background: #dddddd;
         }
-        
+
         .resize3 {
             top: 250px;
             left: 250px;
@@ -45,6 +46,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="resize resize2">
@@ -60,39 +62,8 @@
         <div class="resizebottom"></div>
     </div>
 
-    <!-- CoCreate JS CDN -->
-    <script src="../dist/CoCreate-resize.js" ></script>
-    <script>
-CoCreateResize.init({
-    selector: ".resize",
-    dragLeft: "[data-resize='left']",
-    dragRight: "[data-resize='right']",
-    dragTop: "[data-resize='top']",
-    dragBottom: "[data-resize='bottom']",
-});
-
-        // CoCreateResize.init({
-        //     selector: ".resize",
-        //     dragLeft: "[data-resize_handle='left']",
-        //     dragRight: "[data-resize_handle='right']",
-        //     dragTop: "[data-resize_handle='top']",
-        //     dragBottom: "[data-resize_handle='bottom']",
-        // });
-        // CoCreateResize.init({
-        //     selector: ".newresize",
-        //     dragLeft: "[data-resize_handle='left']",
-        //     dragRight: "[data-resize_handle='right']",
-        //     dragTop: "[data-resize_handle='top']",
-        //     dragBottom: "[data-resize_handle='bottom']",
-        // });
-        // CoCreateResize.init({
-        //     selector: ".resize3",
-        //     dragLeft: ".resizeleft",
-        //     dragRight: ".resizeright",
-        //     dragTop: ".resizetop",
-        //     dragBottom: ".resizebottom",
-        // });
-    </script>
+    <!-- CoCreate JS test CDN -->
+    <script src="../dist/CoCreate-resize.js"></script>
 </body>
 
 </html>
