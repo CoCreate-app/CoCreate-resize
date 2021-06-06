@@ -1,6 +1,6 @@
 # CoCreate-resize
 
-A simple resize component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/resize)
+A light weight resize handler make any element resizable by adding data attributes or usinng init object. Great for Customized text box or text area. Take it for a spin in our [playground!](https://cocreate.app/docs/resize)
 
 ![GitHub file size in bytes](https://img.shields.io/github/size/CoCreate-app/CoCreate-resize/dist/CoCreate-resize.min.js?label=minified%20size&style=for-the-badge)
 ![GitHub latest release](https://img.shields.io/github/v/release/CoCreate-app/CoCreate-resize?style=for-the-badge)
