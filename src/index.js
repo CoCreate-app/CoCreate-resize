@@ -257,6 +257,12 @@ observer.init({
     include: '.resize',
     callback: function(mutation) {
         coCreateResize.initElement(mutation.target);
+        if(mutation.type === "childList")
+        {
+            mutation.target.querySelectorAll("*").forEach((el) => {
+                coCreateResize.initElement(el);
+            });
+        }
     }
 })
 
