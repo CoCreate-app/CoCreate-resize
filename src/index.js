@@ -1,6 +1,6 @@
 // "use strict";
 import observer from "@cocreate/observer";
-import "./style.css";
+import "./index.css";
 
 const EVENTS = ['mousemove touchmove', 'mousedown touchstart', 'mouseup touchend'];
 const DIRECTIONS = ['left', 'right', 'top', 'bottom'];
@@ -256,7 +256,10 @@ observer.init({
     observe: ['subtree', 'childList'],
     include: '.resize',
     callback: function(mutation) {
+        if(!mutation.isRemoved)
         coCreateResize.initElement(mutation.target);
+              console.log('resisize init', mutation.target)
+
     }
 })
 
