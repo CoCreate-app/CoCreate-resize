@@ -47,6 +47,7 @@ CoCreateResize.prototype = {
             this.checkCorners = [];
             this.doDrags = [];
             this.Drags = [];
+            this.gridWidth = 0;
 
             DIRECTIONS.map(d => {
                 this.Drags[d] = this.resizeWidget.querySelector(handleObj['drag' + d.charAt(0).toUpperCase() + d.slice(1)]);
@@ -54,6 +55,17 @@ CoCreateResize.prototype = {
 
             this.bindListeners();
             this.initResize();
+            this.getGridProperty();
+        }
+    },
+
+    getGridProperty: function() {
+        let compStyles = window.getComputedStyle(this.resizeWidget.parentNode);
+        let gridColumns = compStyles.gridTemplateColumns;
+        
+        if(gridColumns !== 'none') {
+            let [width] = gridColumns.split(' ');
+            this.gridWidth = Number.parseFloat(width)
         }
     },
 
@@ -114,7 +126,6 @@ CoCreateResize.prototype = {
     initLeftDrag: function(e) {
         this.initDrag(e, 'left');
     },
-
     initRightDrag: function(e) {
         this.initDrag(e, 'right');
     },
@@ -128,8 +139,8 @@ CoCreateResize.prototype = {
 
         if (top < 10 || height < 10)
             return;
-        this.resizeWidget.style.top = top + 'px';
-        this.resizeWidget.style.height = height + 'px';
+        // this.resizeWidget.style.top = top + 'px';
+        // this.resizeWidget.style.height = height + 'px';
     },
 
 
@@ -143,7 +154,7 @@ CoCreateResize.prototype = {
 
         if (height < 10)
             return;
-        this.resizeWidget.style.height = height + 'px';
+        // this.resizeWidget.style.height = height + 'px';
     },
 
 
@@ -156,8 +167,10 @@ CoCreateResize.prototype = {
 
         if (width < 10)
             return;
-        this.resizeWidget.style.left = left + 'px';
-        this.resizeWidget.style.width = width + 'px';
+        // this.resizeWidget.style.left = left + 'px';
+        // this.resizeWidget.style.width = width + 'px';
+        this.resizeWidget.style['grid-column-end'] = 'span ' + Number.parseInt(width / this.gridWidth);
+
     },
 
 
@@ -168,7 +181,8 @@ CoCreateResize.prototype = {
         width = this.startWidth + e.clientX - this.startX;
         if (width < 10)
             return;
-        this.resizeWidget.style.width = width + 'px';
+        // this.resizeWidget.style.width = width + 'px';
+        this.resizeWidget.style['grid-column-end'] = 'span ' + Number.parseInt(width / this.gridWidth);
     },
 
     stopDrag: function(e) {
