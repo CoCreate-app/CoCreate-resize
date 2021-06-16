@@ -25,10 +25,10 @@ const coCreateResize = {
 
     initElement: function(target) {
         let resizeWidget = new CoCreateResize(target, {
-            dragLeft: "[data-resize_handle='left']",
-            dragRight: "[data-resize_handle='right']",
-            dragTop: "[data-resize_handle='top']",
-            dragBottom: "[data-resize_handle='bottom']"
+            dragLeft: "[data-resize='left']",
+            dragRight: "[data-resize='right']",
+            dragTop: "[data-resize='top']",
+            dragBottom: "[data-resize='bottom']"
         });
         this.resizeWidgets[0] = resizeWidget;
     }
