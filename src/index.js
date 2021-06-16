@@ -258,8 +258,12 @@ observer.init({
     callback: function(mutation) {
         if(!mutation.isRemoved)
         coCreateResize.initElement(mutation.target);
-              console.log('resisize init', mutation.target)
-
+        if(mutation.type === "childList")
+        {
+            mutation.target.querySelectorAll("*").forEach((el) => {
+                coCreateResize.initElement(el);
+            });
+        }
     }
 })
 
