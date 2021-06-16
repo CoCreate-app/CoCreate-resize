@@ -44,22 +44,33 @@
             position: absolute;
             background: #dddddd;
         }
+        .resize4 {
+            top: 350px;
+            left: 350px;
+            width: 50px;
+            height: 50px;
+            padding: 0.5em;
+            position: absolute;
+            background: #dddddd;
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="resize resize2">
-        <div data-resize="left"></div>
-        <div data-resize="right"></div>
-        <div data-resize="top"></div>
-        <div data-resize="bottom"></div>
-    </div>
-    <div class="resize resize3">
-        <div class="resizeleft"></div>
-        <div class="resizeright"></div>
-        <div class="resizetop"></div>
-        <div class="resizebottom"></div>
+    <div class="display:grid">
+        <div class="resize resize2">
+            <div data-resize="left"></div>
+            <div data-resize="right"></div>
+            <div data-resize="top"></div>
+            <div data-resize="bottom"></div>
+        </div>
+        <div class="resize resize3">
+            <div class="resizeleft"></div>
+            <div class="resizeright"></div>
+            <div class="resizetop"></div>
+            <div class="resizebottom"></div>
+        </div>
     </div>
 
     <!-- CoCreate JS test CDN -->
