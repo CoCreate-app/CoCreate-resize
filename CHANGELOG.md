@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.6...v1.0.7) (2021-06-16)
+
+
+### Bug Fixes
+
+* added header for seo ([d1960ce](https://github.com/CoCreate-app/CoCreate-resize/commit/d1960ce23189295bfb3db068e72eda08b80f7da9))
+
 ## [1.0.6](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.5...v1.0.6) (2021-06-06)
 
 
