@@ -139,8 +139,8 @@ CoCreateResize.prototype = {
 
         if (top < 10 || height < 10)
             return;
-        // this.resizeWidget.style.top = top + 'px';
-        // this.resizeWidget.style.height = height + 'px';
+        this.resizeWidget.style.top = top + 'px';
+        this.resizeWidget.style.height = height + 'px';
     },
 
 
@@ -154,7 +154,7 @@ CoCreateResize.prototype = {
 
         if (height < 10)
             return;
-        // this.resizeWidget.style.height = height + 'px';
+        this.resizeWidget.style.height = height + 'px';
     },
 
 
@@ -167,10 +167,8 @@ CoCreateResize.prototype = {
 
         if (width < 10)
             return;
-        // this.resizeWidget.style.left = left + 'px';
-        // this.resizeWidget.style.width = width + 'px';
-        this.resizeWidget.style['grid-column-end'] = 'span ' + Number.parseInt(width / this.gridWidth);
-
+        this.resizeWidget.style.left = left + 'px';
+        this.resizeWidget.style.width = width + 'px';
     },
 
 
@@ -181,14 +179,18 @@ CoCreateResize.prototype = {
         width = this.startWidth + e.clientX - this.startX;
         if (width < 10)
             return;
-        // this.resizeWidget.style.width = width + 'px';
-        this.resizeWidget.style['grid-column-end'] = 'span ' + Number.parseInt(width / this.gridWidth);
+        this.resizeWidget.style.width = width + 'px';
     },
 
     stopDrag: function(e) {
         this.resizeWidget.querySelectorAll('iframe').forEach(function(item) {
             item.style.pointerEvents = null;
         });
+
+        if(this.gridWidth) {
+            this.resizeWidget.style['grid-column-end'] = 'span ' + Number.parseInt(Number.parseInt(this.resizeWidget.style.width) / this.gridWidth);
+            this.resizeWidget.style.width = null;
+        }
 
         DIRECTIONS.map(d => { this.removeListenerMulti(document.documentElement, EVENTS[0], this.doDrags[d]); })
         this.removeListenerMulti(document.documentElement, EVENTS[2], this.stopDrag);
