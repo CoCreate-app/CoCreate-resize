@@ -180,6 +180,9 @@ CoCreateResize.prototype = {
         if (width < 10)
             return;
         this.resizeWidget.style.width = width + 'px';
+        if(this.gridWidth) {
+            this.resizeWidget.style['grid-column-end'] = 'span ' + Number.parseInt(Number.parseInt(this.resizeWidget.style.width) / this.gridWidth);
+        }
     },
 
     stopDrag: function(e) {
@@ -188,7 +191,6 @@ CoCreateResize.prototype = {
         });
 
         if(this.gridWidth) {
-            this.resizeWidget.style['grid-column-end'] = 'span ' + Number.parseInt(Number.parseInt(this.resizeWidget.style.width) / this.gridWidth);
             this.resizeWidget.style.width = null;
         }
 
