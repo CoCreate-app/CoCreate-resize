@@ -91,6 +91,18 @@ CoCreateResize.prototype = {
         }
     },
 
+    checkGridColumns: function() {
+        let gridColumns = window.getComputedStyle(this.resizeWidget.parentNode).gridTemplateColumns;
+        let spans = gridColumns.split(' ');
+        this.limitSpan = spans.length;
+
+        if(this.resizeWidget.style['grid-column-end'])
+        {
+            let curSpan = this.resizeWidget.style['grid-column-end'].split(' ');
+            this.resizeWidget.style['grid-column-end'] = 'span ' + Math.min(Number.parseInt(curSpan[1], this.limitSpan))
+        }
+    },
+
     initResize: function() {
         DIRECTIONS.map(d => { if (this.Drags[d]) this.addListenerMulti(this.Drags[d], EVENTS[0], this.checkCorners[d]); })
     },
