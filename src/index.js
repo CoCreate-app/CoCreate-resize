@@ -48,7 +48,9 @@ CoCreateResize.prototype = {
             this.doDrags = [];
             this.Drags = [];
             this.gridWidth = 0;
+            this.gridHeight = 0;
             this.missingWidth = 0;
+            this.missingHeight = 0;
 
             DIRECTIONS.map(d => {
                 this.Drags[d] = this.resizeWidget.querySelector(handleObj['drag' + d.charAt(0).toUpperCase() + d.slice(1)]);
@@ -64,13 +66,19 @@ CoCreateResize.prototype = {
         let compStyles = window.getComputedStyle(this.resizeWidget.parentNode);
         let currentCompStyles = window.getComputedStyle(this.resizeWidget);
         let gridColumns = compStyles.gridTemplateColumns;
-        // console.log(compStyles)
+        let height = compStyles.gridAutoRows;
+        // console.log(gridHeight)
         if(gridColumns !== 'none') {
             let [width] = gridColumns.split(' ');
             this.gridWidth = Number.parseFloat(width) + Number.parseInt(compStyles.gridColumnGap);
+            this.gridHeight = Number.parseInt(height) + Number.parseInt(compStyles.gridRowGap);
             this.missingWidth = Number.parseInt(currentCompStyles.paddingRight) + Number.parseInt(currentCompStyles.paddingLeft)
                                 + Number.parseInt(currentCompStyles.marginRight) + Number.parseInt(currentCompStyles.marginLeft)
                                 + Number.parseInt(currentCompStyles.borderRight) + Number.parseInt(currentCompStyles.borderLeft);
+
+            this.missingHeight = Number.parseInt(currentCompStyles.paddingTop) + Number.parseInt(currentCompStyles.paddingBottom)
+                                + Number.parseInt(currentCompStyles.marginTop) + Number.parseInt(currentCompStyles.marginBottom)
+                                + Number.parseInt(currentCompStyles.borderTop) + Number.parseInt(currentCompStyles.borderBottom);
         }
     },
 
@@ -160,6 +168,9 @@ CoCreateResize.prototype = {
         if (height < 10)
             return;
         this.resizeWidget.style.height = height + 'px';
+        if(this.gridHeight) {
+            this.resizeWidget.style['grid-row-end'] = 'span ' + Math.ceil((height + this.missingHeight) / this.gridHeight);
+        }
     },
 
 
@@ -185,7 +196,6 @@ CoCreateResize.prototype = {
         if (width < 10)
             return;
         this.resizeWidget.style.width = width + 'px';
-        console.log('hello', this.gridWidth, width, this.missingWidth);
         if(this.gridWidth) {
             this.resizeWidget.style['grid-column-end'] = 'span ' + Math.ceil((width + this.missingWidth) / this.gridWidth);
         }
@@ -196,8 +206,9 @@ CoCreateResize.prototype = {
             item.style.pointerEvents = null;
         });
 
-        if(this.gridWidth) {
+        if(this.gridWidth || this.gridHeight) {
             this.resizeWidget.style.width = null;
+            this.resizeWidget.style.height = null;
         }
 
         DIRECTIONS.map(d => { this.removeListenerMulti(document.documentElement, EVENTS[0], this.doDrags[d]); })
