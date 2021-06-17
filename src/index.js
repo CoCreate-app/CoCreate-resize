@@ -217,7 +217,7 @@ CoCreateResize.prototype = {
 
     detectGrid: function() {
         let compStyles = window.getComputedStyle(this.resizeWidget.parentNode)
-        return (compStyles.gridTemplateColumns !== 'none') ? true : false;
+        return (compStyles.display === 'grid') ? true : false;
     },
 
     stopDrag: function(e) {
