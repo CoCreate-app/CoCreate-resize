@@ -47,10 +47,13 @@ CoCreateResize.prototype = {
             this.checkCorners = [];
             this.doDrags = [];
             this.Drags = [];
+            
+            //this is for grid
             this.gridWidth = 0;
             this.gridHeight = 0;
             this.missingWidth = 0;
             this.missingHeight = 0;
+            this.limitSpan = 0;
 
             DIRECTIONS.map(d => {
                 this.Drags[d] = this.resizeWidget.querySelector(handleObj['drag' + d.charAt(0).toUpperCase() + d.slice(1)]);
@@ -58,6 +61,8 @@ CoCreateResize.prototype = {
 
             this.bindListeners();
             this.initResize();
+
+            //this is just for grid system
             this.getGridProperty();
         }
     },
@@ -67,10 +72,12 @@ CoCreateResize.prototype = {
         let currentCompStyles = window.getComputedStyle(this.resizeWidget);
         let gridColumns = compStyles.gridTemplateColumns;
         let height = compStyles.gridAutoRows;
-        // console.log(gridHeight)
+        
+        // console.log(gridColumns)
         if(gridColumns !== 'none') {
-            let [width] = gridColumns.split(' ');
-            this.gridWidth = Number.parseFloat(width) + Number.parseInt(compStyles.gridColumnGap);
+            let width = gridColumns.split(' ');
+            this.limitSpan = width.length;
+            this.gridWidth = Number.parseFloat(width[0]) + Number.parseInt(compStyles.gridColumnGap);
             this.gridHeight = Number.parseInt(height) + Number.parseInt(compStyles.gridRowGap);
             this.missingWidth = Number.parseInt(currentCompStyles.paddingRight) + Number.parseInt(currentCompStyles.paddingLeft)
                                 + Number.parseInt(currentCompStyles.marginRight) + Number.parseInt(currentCompStyles.marginLeft)
@@ -168,6 +175,8 @@ CoCreateResize.prototype = {
         if (height < 10)
             return;
         this.resizeWidget.style.height = height + 'px';
+
+        //this is just for grid system
         if(this.gridHeight) {
             this.resizeWidget.style['grid-row-end'] = 'span ' + Math.ceil((height + this.missingHeight) / this.gridHeight);
         }
@@ -196,8 +205,13 @@ CoCreateResize.prototype = {
         if (width < 10)
             return;
         this.resizeWidget.style.width = width + 'px';
+
+        //this is just for grid system
         if(this.gridWidth) {
-            this.resizeWidget.style['grid-column-end'] = 'span ' + Math.ceil((width + this.missingWidth) / this.gridWidth);
+            let spans = Math.ceil((width + this.missingWidth) / this.gridWidth);
+            let span = (spans > this.limitSpan) ? this.limitSpan : spans
+            console.log()
+            this.resizeWidget.style['grid-column-end'] = 'span ' + span;
         }
     },
 
@@ -206,6 +220,7 @@ CoCreateResize.prototype = {
             item.style.pointerEvents = null;
         });
 
+        //this is just for grid system
         if(this.gridWidth || this.gridHeight) {
             this.resizeWidget.style.width = null;
             this.resizeWidget.style.height = null;
