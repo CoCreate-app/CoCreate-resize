@@ -73,7 +73,7 @@ CoCreateResize.prototype = {
         let gridColumns = compStyles.gridTemplateColumns;
         let height = compStyles.gridAutoRows;
         
-        // console.log(gridColumns)
+        // console.log(compStyles)
         if(gridColumns !== 'none') {
             let width = gridColumns.split(' ');
             this.limitSpan = width.length;
@@ -215,13 +215,18 @@ CoCreateResize.prototype = {
         }
     },
 
+    detectGrid: function() {
+        let compStyles = window.getComputedStyle(this.resizeWidget.parentNode)
+        return (compStyles.gridTemplateColumns !== 'none') ? true : false;
+    },
+
     stopDrag: function(e) {
         this.resizeWidget.querySelectorAll('iframe').forEach(function(item) {
             item.style.pointerEvents = null;
         });
 
         //this is just for grid system
-        if(this.gridWidth || this.gridHeight) {
+        if(this.detectGrid()) {
             this.resizeWidget.style.width = null;
             this.resizeWidget.style.height = null;
         }
