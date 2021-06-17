@@ -68,7 +68,7 @@ CoCreateResize.prototype = {
         if(gridColumns !== 'none') {
             let [width] = gridColumns.split(' ');
             this.gridWidth = Number.parseFloat(width);
-            this.missingWidth = Number.parseInt(currentCompStyles.padding) / 2;
+            this.missingWidth = Number.parseInt(currentCompStyles.paddingRight) + Number.parseInt(currentCompStyles.marginRight);
         }
     },
 
@@ -185,7 +185,7 @@ CoCreateResize.prototype = {
         this.resizeWidget.style.width = width + 'px';
         console.log('hello', this.gridWidth, width, this.missingWidth);
         if(this.gridWidth) {
-            this.resizeWidget.style['grid-column-end'] = 'span ' + Math.ceil(width / (this.gridWidth - this.missingWidth));
+            this.resizeWidget.style['grid-column-end'] = 'span ' + Math.ceil((width + this.missingWidth) / this.gridWidth);
         }
     },
 
