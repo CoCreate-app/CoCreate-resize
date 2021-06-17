@@ -67,8 +67,10 @@ CoCreateResize.prototype = {
         // console.log(compStyles)
         if(gridColumns !== 'none') {
             let [width] = gridColumns.split(' ');
-            this.gridWidth = Number.parseFloat(width);
-            this.missingWidth = Number.parseInt(currentCompStyles.paddingRight) + Number.parseInt(currentCompStyles.marginRight);
+            this.gridWidth = Number.parseFloat(width) + Number.parseInt(compStyles.gridColumnGap);
+            this.missingWidth = Number.parseInt(currentCompStyles.paddingRight) + Number.parseInt(currentCompStyles.paddingLeft)
+                                + Number.parseInt(currentCompStyles.marginRight) + Number.parseInt(currentCompStyles.marginLeft)
+                                + Number.parseInt(currentCompStyles.borderRight) + Number.parseInt(currentCompStyles.borderLeft);
         }
     },
 
