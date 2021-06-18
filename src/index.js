@@ -67,6 +67,7 @@ CoCreateResize.prototype = {
 
             //this is just for grid system
             this.getGridProperty();
+            this.checkGridColumns();
         }
     },
 
@@ -241,12 +242,12 @@ CoCreateResize.prototype = {
 
         //this is just for grid system
         if(this.detectGrid()) {
-            // console.log(this.resizeWidget.getAttribute('class'))
             this.resizeWidget.style.width = null;
             this.resizeWidget.style.height = null;
 
             if(this.widthSpan)  this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-column-end:span_' + this.widthSpan)
             if(this.heightSpan) this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-row-end:span_' + this.heightSpan)
+            this.checkGridColumns();
         }
 
         DIRECTIONS.map(d => { this.removeListenerMulti(document.documentElement, EVENTS[0], this.doDrags[d]); })
