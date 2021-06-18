@@ -100,7 +100,7 @@ CoCreateResize.prototype = {
         if(this.resizeWidget.style['grid-column-end'])
         {
             let curSpan = this.resizeWidget.style['grid-column-end'].split(' ');
-            this.resizeWidget.style['grid-column-end'] = 'span ' + Math.min(Number.parseInt(curSpan[1], this.limitSpan))
+            this.resizeWidget.style['grid-column-end'] = 'span ' + Math.min(Number.parseInt(curSpan[1]), this.limitSpan)
         }
     },
 
@@ -245,7 +245,7 @@ CoCreateResize.prototype = {
             this.resizeWidget.style.width = null;
             this.resizeWidget.style.height = null;
 
-            if(this.widthSpan)  this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-column-end:span_' + this.widthSpan)
+            // if(this.widthSpan)  this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-column-end:span_' + this.widthSpan)
             if(this.heightSpan) this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-row-end:span_' + this.heightSpan)
             this.checkGridColumns();
         }
