@@ -329,7 +329,7 @@ CoCreateResize.prototype = {
 
 observer.init({
     name: 'CoCreateResize',
-    observe: ['childList'],
+    observe: ['childList', 'addedNodes'],
     callback: function(mutation) {
         if(!mutation.isRemoved)
         coCreateResize.initElement(mutation.target);
