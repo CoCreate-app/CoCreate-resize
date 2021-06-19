@@ -67,7 +67,7 @@ CoCreateResize.prototype = {
 
             //this is just for grid system
             this.getGridProperty();
-            this.checkGridColumns();
+            window.addEventListener('resize', this.checkGridColumns);
         }
     },
 
@@ -93,14 +93,17 @@ CoCreateResize.prototype = {
     },
 
     checkGridColumns: function() {
-        let gridColumns = window.getComputedStyle(this.resizeWidget.parentNode).gridTemplateColumns;
-        let spans = gridColumns.split(' ');
-        this.limitSpan = spans.length;
-
-        if(this.resizeWidget.style['grid-column-end'])
+        if(typeof this.resizeWidget !== 'undefined')
         {
-            let curSpan = this.resizeWidget.style['grid-column-end'].split(' ');
-            this.resizeWidget.style['grid-column-end'] = 'span ' + Math.min(Number.parseInt(curSpan[1]), this.limitSpan)
+            let gridColumns = window.getComputedStyle(this.resizeWidget.parentNode).gridTemplateColumns;
+            let spans = gridColumns.split(' ');
+            this.limitSpan = spans.length;
+    
+            if(this.resizeWidget.style['grid-column-end'])
+            {
+                let curSpan = this.resizeWidget.style['grid-column-end'].split(' ');
+                this.resizeWidget.style['grid-column-end'] = 'span ' + Math.min(Number.parseInt(curSpan[1]), this.limitSpan)
+            }
         }
     },
 
@@ -245,9 +248,8 @@ CoCreateResize.prototype = {
             this.resizeWidget.style.width = null;
             this.resizeWidget.style.height = null;
 
-            // if(this.widthSpan)  this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-column-end:span_' + this.widthSpan)
+            if(this.widthSpan)  this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-column-end:span_' + this.widthSpan)
             if(this.heightSpan) this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-row-end:span_' + this.heightSpan)
-            this.checkGridColumns();
         }
 
         DIRECTIONS.map(d => { this.removeListenerMulti(document.documentElement, EVENTS[0], this.doDrags[d]); })
@@ -327,9 +329,10 @@ CoCreateResize.prototype = {
 
 observer.init({
     name: 'CoCreateResize',
-    observe: ['addedNodes'],
+    observe: ['childList', 'addedNodes'],
     callback: function(mutation) {
         console.log('tesstttttt', mutation)
+        if (!mutation.target.tagName) return;
         // if(!mutation.isRemoved)
         coCreateResize.initElement(mutation.target);
         if(mutation.type === "childList")
