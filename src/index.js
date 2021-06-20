@@ -329,18 +329,10 @@ CoCreateResize.prototype = {
 
 observer.init({
     name: 'CoCreateResize',
-    observe: ['childList', 'addedNodes'],
+    observe: [ 'addedNodes'],
     callback: function(mutation) {
-        console.log('tesstttttt', mutation)
-        if (!mutation.target.tagName) return;
-        // if(!mutation.isRemoved)
         coCreateResize.initElement(mutation.target);
-        if(mutation.type === "childList")
-        {
-            mutation.target.querySelectorAll("*").forEach((el) => {
-                coCreateResize.initElement(el);
-            });
-        }
+
     }
 })
 
