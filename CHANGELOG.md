@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.7...v1.0.8) (2021-06-20)
+
+
+### Bug Fixes
+
+* new mutaionObserver init function ([7e27e3f](https://github.com/CoCreate-app/CoCreate-resize/commit/7e27e3fc3fe28d46f20e504dd62443950120baa7))
+
 ## [1.0.7](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.6...v1.0.7) (2021-06-16)
 
 
