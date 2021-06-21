@@ -166,6 +166,15 @@ CoCreateResize.prototype = {
     initRightDrag: function(e) {
         this.initDrag(e, 'right');
     },
+
+    //this is just for grid system
+    setRowEnd: function(height) {
+        if(this.gridHeight) {
+            this.heightSpan = Math.ceil((height + this.missingHeight) / this.gridHeight);
+            this.resizeWidget.style['grid-row-end'] = 'span ' + this.heightSpan;
+        }
+    },
+
     doTopDrag: function(e) {
         let top, height;
 
@@ -178,6 +187,8 @@ CoCreateResize.prototype = {
             return;
         this.resizeWidget.style.top = top + 'px';
         this.resizeWidget.style.height = height + 'px';
+
+        this.setRowEnd(height);
     },
 
 
@@ -193,11 +204,7 @@ CoCreateResize.prototype = {
             return;
         this.resizeWidget.style.height = height + 'px';
 
-        //this is just for grid system
-        if(this.gridHeight) {
-            this.heightSpan = Math.ceil((height + this.missingHeight) / this.gridHeight);
-            this.resizeWidget.style['grid-row-end'] = 'span ' + this.heightSpan;
-        }
+        this.setRowEnd(height);
     },
 
     //this is just for grid system
@@ -252,6 +259,7 @@ CoCreateResize.prototype = {
             this.resizeWidget.style.width = null;
             this.resizeWidget.style.height = null;
             this.resizeWidget.style.left = null;
+            this.resizeWidget.style.top = null;
 
             if(this.widthSpan)  this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-column-end:span_' + this.widthSpan)
             if(this.heightSpan) this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-row-end:span_' + this.heightSpan)
