@@ -100,8 +100,17 @@ CoCreateResize.prototype = {
             this.limitSpan = Math.floor(spans);
             if(this.resizeWidget.style['grid-column-end'])
             {
-                let curSpan = this.resizeWidget.style['grid-column-end'].split(' ');
-                this.resizeWidget.style['grid-column-end'] = 'span ' + Math.min(Number.parseInt(curSpan[1]), this.limitSpan)
+                let curClassAttributes = this.resizeWidget.getAttribute('class').split(' ')
+                let prevColumnState = curClassAttributes[curClassAttributes.length - 1].split('_')
+                let prevSpan = Number.parseInt(prevColumnState[1])
+                let curColumnState = this.resizeWidget.style['grid-column-end'].split(' ');
+                let curSpan = Number.parseInt(curColumnState[1])
+                
+                let span = 0;
+                if(this.limitSpan >= prevSpan)   span = prevSpan;
+                else span = Math.min(curSpan, this.limitSpan)
+
+                this.resizeWidget.style['grid-column-end'] = 'span ' + span;
             }
         }
     },
