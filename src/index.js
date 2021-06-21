@@ -67,7 +67,7 @@ CoCreateResize.prototype = {
 
             //this is just for grid system
             this.getGridProperty();
-            window.addEventListener('resize', this.checkGridColumns);
+            window.addEventListener('resize', this.checkGridColumns.bind(this));
         }
     },
 
@@ -93,12 +93,11 @@ CoCreateResize.prototype = {
     },
 
     checkGridColumns: function() {
-        if(typeof this.resizeWidget !== 'undefined')
+        if(typeof this.resizeWidget !== 'undefined' && this.resizeWidget.parentNode)
         {
-            let gridColumns = window.getComputedStyle(this.resizeWidget.parentNode).gridTemplateColumns;
-            let spans = gridColumns.split(' ');
-            this.limitSpan = spans.length;
-    
+            let compStylesOfParent = window.getComputedStyle(this.resizeWidget.parentNode);
+            let spans = Number.parseInt(compStylesOfParent.width) / Number.parseInt(compStylesOfParent.gridAutoRows);
+            this.limitSpan = Math.floor(spans);
             if(this.resizeWidget.style['grid-column-end'])
             {
                 let curSpan = this.resizeWidget.style['grid-column-end'].split(' ');
