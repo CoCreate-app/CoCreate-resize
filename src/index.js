@@ -108,6 +108,7 @@ CoCreateResize.prototype = {
                 
                 let span = 0;
                 if(this.limitSpan >= prevSpan)   span = prevSpan;
+                else if(prevSpan > this.limitSpan) span = this.limitSpan
                 else span = Math.min(curSpan, this.limitSpan)
 
                 this.resizeWidget.style['grid-column-end'] = 'span ' + span;
