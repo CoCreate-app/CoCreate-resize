@@ -96,8 +96,13 @@ CoCreateResize.prototype = {
         if(typeof this.resizeWidget !== 'undefined' && this.resizeWidget.parentNode)
         {
             let compStylesOfParent = window.getComputedStyle(this.resizeWidget.parentNode);
-            let spans = Number.parseInt(compStylesOfParent.width) / Number.parseInt(compStylesOfParent.gridAutoRows);
-            this.limitSpan = Math.floor(spans);
+            let spans = 0;
+            let gridColumns = compStylesOfParent.gridTemplateColumns.split(' ')
+            let temp = gridColumns[0]
+            gridColumns.map(v => {
+                if(v == temp)   spans ++;
+            })
+            this.limitSpan = spans;
             if(this.resizeWidget.style['grid-column-end'])
             {
                 let curClassAttributes = this.resizeWidget.getAttribute('class').split(' ')
