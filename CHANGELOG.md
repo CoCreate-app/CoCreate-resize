@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.8...v1.0.9) (2021-06-23)
+
+
+### Bug Fixes
+
+* update to new crud.save and crud.read ([46242b5](https://github.com/CoCreate-app/CoCreate-resize/commit/46242b51dff6d58e8009a5d83d2d81b8f5efe93f))
+
 ## [1.0.8](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.7...v1.0.8) (2021-06-20)
 
 
