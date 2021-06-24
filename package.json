@@ -1,66 +1,59 @@
 {
-    "name": "@cocreate/resize",
-    "version": "1.0.9",
-    "description": "A light weight resize handler make any element resizable by adding data attributes or usinng init object. Great for Customized text box or text area.",
-    "keywords": [
-        "resize",
-        "cocreate",
-        "low-code-framework",
-        "no-code-framework",
-        "cocreatejs",
-        "cocreatejs-component",
-        "cocreate-framework",
-        "no-code",
-        "low-code",
-        "collaborative-framework",
-        "realtime",
-        "realtime-framework",
-        "collaboration",
-        "shared-editing",
-        "html5-framework",
-        "javascript-framework"
-    ],
-    "publishConfig": {
-        "access": "public"
-    },
-    "scripts": {
-        "start": "npx webpack --config webpack.config.js",
-        "build": "NODE_ENV=production npx webpack --config webpack.config.js",
-        "dev": "npx webpack --config webpack.config.js --watch",
-        "docs": "node ./node_modules/@cocreate/docs/src/index.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/CoCreate-app/CoCreate-resize.git"
-    },
-    "author": "CoCreate LLC",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/CoCreate-app/CoCreate-resize/issues"
-    },
-    "homepage": "https://cocreate.app/docs/resize",
-    "funding": {
-        "type": "GitHub Sponsors ❤",
-        "url": "https://github.com/sponsors/CoCreate-app"
-    },
-    "main": "src/index.js",
-    "devDependencies": {
-        "@babel/core": "^7.9.6",
-        "@babel/preset-env": "^7.9.6",
-        "babel-loader": "^8.1.0",
-        "clean-webpack-plugin": "^3.0.0",
-        "file-loader": "^6.2.0",
-        "html-webpack-plugin": "^4.5.0",
-        "mini-css-extract-plugin": "^1.3.9",
-        "style-loader": "^2.0.0",
-        "terser-webpack-plugin": "^5.1.1",
-        "uglifyjs-webpack-plugin": "^2.2.0",
-        "webpack": "^5.24.4",
-        "webpack-cli": "^4.5.0",
-        "webpack-log": "^3.0.1"
-    },
-    "dependencies": {
-        "@cocreate/docs": "^1.0.3",
-        "@cocreate/observer": "^1.0.0"
-    }
+  "name": "@cocreate/resize",
+  "version": "1.0.9",
+  "description": "A light weight resize handler make any element resizable by adding data attributes or usinng init object. Great for Customized text box or text area.",
+  "keywords": [
+    "resize",
+    "cocreate",
+    "low-code-framework",
+    "no-code-framework",
+    "cocreatejs",
+    "cocreatejs-component",
+    "cocreate-framework",
+    "no-code",
+    "low-code",
+    "collaborative-framework",
+    "realtime",
+    "realtime-framework",
+    "collaboration",
+    "shared-editing",
+    "html5-framework",
+    "javascript-framework"
+  ],
+  "publishConfig": { "access": "public" },
+  "scripts": {
+    "start": "npx webpack --config webpack.config.js",
+    "build": "NODE_ENV=production npx webpack --config webpack.config.js",
+    "dev": "npx webpack --config webpack.config.js --watch",
+    "docs": "node ./node_modules/@cocreate/docs/src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoCreate-app/CoCreate-resize.git"
+  },
+  "author": "CoCreate LLC",
+  "license": "MIT",
+  "bugs": { "url": "https://github.com/CoCreate-app/CoCreate-resize/issues" },
+  "homepage": "https://cocreate.app/docs/resize",
+  "funding": {
+    "type": "GitHub Sponsors ❤",
+    "url": "https://github.com/sponsors/CoCreate-app"
+  },
+  "main": "src/index.js",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.3.9",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0",
+    "webpack-log": "^3.0.1"
+  },
+  "dependencies": { "@cocreate/docs": "latest", "@cocreate/observer": "latest" }
 }
