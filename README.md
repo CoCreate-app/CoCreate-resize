@@ -2,10 +2,12 @@
 
 A light weight resize handler make any element resizable by adding data attributes or usinng init object. Great for Customized text box or text area. Take it for a spin in our [playground!](https://cocreate.app/docs/resize)
 
-![GitHub file size in bytes](https://img.shields.io/github/size/CoCreate-app/CoCreate-resize/dist/CoCreate-resize.min.js?label=minified%20size&style=for-the-badge)
-![GitHub latest release](https://img.shields.io/github/v/release/CoCreate-app/CoCreate-resize?style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/CoCreate-app/CoCreate-resize?style=for-the-badge)
-![GitHub labels](https://img.shields.io/github/labels/CoCreate-app/CoCreate-resize/help%20wanted?style=for-the-badge)
+![minified](https://img.badgesize.io/https://cdn.cocreate.app/resize/latest/CoCreate-resize.min.js?style=flat-square&label=minified&color=orange)
+![gzip](https://img.badgesize.io/https://cdn.cocreate.app/resize/latest/CoCreate-resize.min.js?compression=gzip&style=flat-square&label=gzip&color=yellow)
+![brotli](https://img.badgesize.io/https://cdn.cocreate.app/resize/latest/CoCreate-resize.min.js?compression=brotli&style=flat-square&label=brotli)
+![GitHub latest release](https://img.shields.io/github/v/release/CoCreate-app/CoCreate-resize?style=flat-square)
+![License](https://img.shields.io/github/license/CoCreate-app/CoCreate-resize?style=flat-square)
+![Hiring](https://img.shields.io/static/v1?style=flat-square&label=&message=Hiring&color=blueviolet)
 
 ![CoCreate-resize](https://cdn.cocreate.app/docs/CoCreate-resize.gif)
 
@@ -27,6 +29,12 @@ For a complete guide and working demo refer to the [doumentation](https://cocrea
 
 ```shell
 $ npm i @cocreate/resize
+```
+
+## yarn
+
+```shell
+$ yarn install @cocreate/resize
 ```
 
 # Table of Contents
