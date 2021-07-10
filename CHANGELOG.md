@@ -1,3 +1,10 @@
+## [1.0.16](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.15...v1.0.16) (2021-07-10)
+
+
+### Bug Fixes
+
+* gitignore all logs ([b86db2d](https://github.com/CoCreate-app/CoCreate-resize/commit/b86db2da1f505db3612d4d249b38064804933150))
+
 ## [1.0.15](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.14...v1.0.15) (2021-07-07)
 
 
