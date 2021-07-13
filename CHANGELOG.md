@@ -1,3 +1,11 @@
+## [1.0.17](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.16...v1.0.17) (2021-07-13)
+
+
+### Bug Fixes
+
+* add yarn lockfile to git ignore ([f6332b9](https://github.com/CoCreate-app/CoCreate-resize/commit/f6332b93c4a17fd694432732971035e8c3548b51))
+* remove yarn.lock ([7a3b616](https://github.com/CoCreate-app/CoCreate-resize/commit/7a3b61693b696d1bd3814cca093d463f4d2d831d))
+
 ## [1.0.16](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.15...v1.0.16) (2021-07-10)
 
 
