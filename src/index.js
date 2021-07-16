@@ -357,7 +357,8 @@ CoCreateResize.prototype = {
 
 observer.init({
     name: 'CoCreateResize',
-    observe: [ 'addedNodes'],
+    observe: ['addedNodes'],
+	target: '.resize',
     callback: function(mutation) {
         coCreateResize.initElement(mutation.target);
 
