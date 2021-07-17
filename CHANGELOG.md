@@ -1,3 +1,11 @@
+## [1.0.19](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.18...v1.0.19) (2021-07-17)
+
+
+### Bug Fixes
+
+* init and update demos scripts ([50607ce](https://github.com/CoCreate-app/CoCreate-resize/commit/50607ceaa5838069139e78a0b158e04802667df9))
+* workflows ([b5df97f](https://github.com/CoCreate-app/CoCreate-resize/commit/b5df97f9ea3bccc6c2cd4f1394836070f6bfd936))
+
 ## [1.0.18](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.17...v1.0.18) (2021-07-14)
 
 
