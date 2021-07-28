@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.0...v1.1.1) (2021-07-28)
+
+
+### Bug Fixes
+
+* remove data- from fetch, pass and filter ([cfbdc5a](https://github.com/CoCreate-app/CoCreate-resize/commit/cfbdc5a43ace31d25319406cf40177153edbaf43))
+
 # [1.1.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.19...v1.1.0) (2021-07-28)
 
 
