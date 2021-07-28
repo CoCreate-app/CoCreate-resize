@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.19...v1.1.0) (2021-07-28)
+
+
+### Features
+
+* add new is{attribute} system and remove data- from attributtes ([7d8684a](https://github.com/CoCreate-app/CoCreate-resize/commit/7d8684a4cd60c69378dff23503cecf059b1d2149))
+
 ## [1.0.19](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.0.18...v1.0.19) (2021-07-17)
 
 
