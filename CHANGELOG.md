@@ -1,3 +1,12 @@
+## [1.1.2](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.1...v1.1.2) (2021-08-02)
+
+
+### Bug Fixes
+
+* remove data- from attributes ([759d321](https://github.com/CoCreate-app/CoCreate-resize/commit/759d321855575d1222ec740d7baec1bd199d9a32))
+* removed data- from resize attributes ([057fcba](https://github.com/CoCreate-app/CoCreate-resize/commit/057fcba4da6981f6822a2a2126491f1c02b3e00f))
+* update data-fullscreen to fullscreen ([d459f71](https://github.com/CoCreate-app/CoCreate-resize/commit/d459f71853c4c2942b653401a5a19290d4930396))
+
 ## [1.1.1](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.0...v1.1.1) (2021-07-28)
 
 
