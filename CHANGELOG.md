@@ -1,3 +1,12 @@
+## [1.1.3](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.2...v1.1.3) (2021-08-14)
+
+
+### Bug Fixes
+
+* remove data- from dnd attributes ([b346d78](https://github.com/CoCreate-app/CoCreate-resize/commit/b346d78d734367e0353cefdcb058d946ce5fff0d))
+* rename data-element_id to element_id ([68a5787](https://github.com/CoCreate-app/CoCreate-resize/commit/68a5787f4d4d1dfbfdfb119d8706dfe95f52def7))
+* replace data-transform with toggle ([46eac1e](https://github.com/CoCreate-app/CoCreate-resize/commit/46eac1e92a686d5599dea80cbf446811be779657))
+
 ## [1.1.2](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.1...v1.1.2) (2021-08-02)
 
 
