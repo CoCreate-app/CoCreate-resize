@@ -56,7 +56,7 @@
 		
 		<!-- Navbar -->
 		<nav class="nav display:flex align-items:center background:whitesmoke"
-			data-main_content_id="content"
+			main-content_id="content"
 			scroll="sticky-nav, hide-nav"
 			scroll-up="5"
 			scroll-down="5">
@@ -130,7 +130,7 @@
 		</nav>
 		
 		<!-- Main Content -->
-		<main class="padding:10px" data-main_content_id="content">
+		<main class="padding:10px" main-content_id="content">
 			<div class="domEditor main-height" name='cards1' collection="test" pass_id="me1234" >
 			
 			<div class="display:grid grid-auto-rows:150px gap:10px grid-template-columns:repeat(auto-fill,minmax(150px,1fr))" dnd-group-name="dashboard"
@@ -164,14 +164,14 @@
        <!--                 <canvas class="cocreate-chart" chart-type="bar" chart-options="" chart-labels="January, February, March, April, May, June, July" chart-title="Combine Charts">-->
        <!--                     <div class="cocreate-chart-dataset" chart-dataset_type="line">-->
        <!--                         <div fetch-collection="chart" fetch-name="Jan" data-calculation="sum">-->
-       <!--                             <div filter-name="Jan" filter-value="0, 10" data-value_type="number" filter-operator="$range"></div>-->
+       <!--                             <div filter-name="Jan" filter-value="0, 10" filter-value_type="number" filter-operator="$range"></div>-->
        <!--                         </div>-->
        <!--                         <div fetch-collection="chart" fetch-name="Feb">-->
        <!--                             <div filter-name="permission" filter-value="read" filter-operator="$nin"></div>-->
        <!--                             <div filter-name="type" filter-value="leader" filter-operator="$in"></div>-->
        <!--                         </div>-->
        <!--                         <div fetch-collection="chart" fetch-name="Mar">-->
-       <!--                             <div filter-name="Mar" filter-value="-7" filter-operator="$eq" data-value_type="number"></div>-->
+       <!--                             <div filter-name="Mar" filter-value="-7" filter-operator="$eq" filter-value_type="number"></div>-->
        <!--                         </div>-->
        <!--                         <div fetch-collection="chart" fetch-name="Apr"></div>-->
        <!--                         <div fetch-collection="chart" fetch-name="May"></div>-->
