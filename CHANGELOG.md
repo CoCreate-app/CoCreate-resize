@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.5...v1.1.6) (2021-08-22)
+
+
+### Bug Fixes
+
+* removed data- from main-content, clone, filter-value_type ([5d93532](https://github.com/CoCreate-app/CoCreate-resize/commit/5d935321936d4539d5d9e7efa204ac6d5fa7985d))
+
 ## [1.1.5](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.4...v1.1.5) (2021-08-22)
 
 
