@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/resize",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "A light weight resize handler make any element resizable by adding data attributes or usinng init object. Great for Customized text box or text area.",
   "keywords": [
     "resize",
