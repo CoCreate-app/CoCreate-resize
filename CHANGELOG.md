@@ -1,3 +1,10 @@
+## [1.1.12](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.11...v1.1.12) (2021-09-09)
+
+
+### Bug Fixes
+
+* CoCreate.config directory, path, name and  public ([15c9967](https://github.com/CoCreate-app/CoCreate-resize/commit/15c996755b820b37d354fa5de22d172d35895f4d))
+
 ## [1.1.11](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.10...v1.1.11) (2021-09-08)
 
 
