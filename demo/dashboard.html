@@ -56,7 +56,7 @@
 		
 		<!-- Navbar -->
 		<nav class="nav display:flex align-items:center background:whitesmoke"
-			main-content_id="content"
+			content_id="content"
 			scroll="sticky-nav, hide-nav"
 			scroll-up="5"
 			scroll-down="5">
@@ -130,7 +130,7 @@
 		</nav>
 		
 		<!-- Main Content -->
-		<main class="padding:10px" main-content_id="content">
+		<main class="padding:10px" content_id="content">
 			<div class="domEditor main-height" name='cards1' collection="test" pass_id="me1234" >
 			
 			<div class="display:grid grid-auto-rows:150px gap:10px grid-template-columns:repeat(auto-fill,minmax(150px,1fr))" dnd-group-name="dashboard"
@@ -209,13 +209,7 @@
 
 		</main>
 		
-		<script>
-			var config = {
-				apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-				organization_Id: '5de0387b12e200ea63204d6c',
-                host: 'wss://ws.cocreate.app'
-			}
-		</script>
+		<script src="./apikey.js"></script>
         
         <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
         <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>

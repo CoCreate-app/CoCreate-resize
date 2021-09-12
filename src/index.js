@@ -322,6 +322,7 @@ CoCreateResize.prototype = {
 
     getDistance: function(elem, flag) {
         var location = 0;
+        if (!elem) return;
         if (elem.offsetParent) {
             do {
                 location += (flag) ? elem.offsetTop : elem.offsetLeft;
@@ -366,7 +367,7 @@ observer.init({
 })
 
 coCreateResize.init({
-    selector: ".resize",
+    selector: "[resizable]:not([resizable='false'])",
     dragLeft: "[resize='left']",
     dragRight: "[resize='right']",
     dragTop: "[resize='top']",
