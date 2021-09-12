@@ -1,3 +1,10 @@
+## [1.1.17](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.16...v1.1.17) (2021-09-12)
+
+
+### Bug Fixes
+
+* support resizing over iframes ([bb7ae3f](https://github.com/CoCreate-app/CoCreate-resize/commit/bb7ae3f4ef1172cac4a18b4e00ee3be4ed053ebb))
+
 ## [1.1.16](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.15...v1.1.16) (2021-09-12)
 
 
