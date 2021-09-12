@@ -265,7 +265,7 @@ CoCreateResize.prototype = {
     },
 
     stopDrag: function(e) {
-        this.resizeWidget.querySelectorAll('iframe').forEach(function(item) {
+        document.querySelectorAll('iframe').forEach(function(item) {
             item.style.pointerEvents = null;
         });
 
@@ -350,8 +350,8 @@ CoCreateResize.prototype = {
 
     // style="pointer-events:none" for iframe when drag event starts
     processIframe: function() {
-        this.resizeWidget.querySelectorAll('iframe').forEach(function(item) {
-            item.style.pointerEvents = 'none';
+        document.querySelectorAll('iframe').forEach(function(item) {
+            item.style.pointerEvents = null;
         });
     }
 }
