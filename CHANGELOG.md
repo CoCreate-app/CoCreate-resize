@@ -1,3 +1,10 @@
+## [1.1.19](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.18...v1.1.19) (2021-09-14)
+
+
+### Bug Fixes
+
+* add cocreate.app to domains ([70380a9](https://github.com/CoCreate-app/CoCreate-resize/commit/70380a9f7a6091dfb0d7a964496d2cda59b82cd5))
+
 ## [1.1.18](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.17...v1.1.18) (2021-09-13)
 
 
