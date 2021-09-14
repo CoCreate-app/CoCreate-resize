@@ -1,3 +1,10 @@
+## [1.1.20](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.19...v1.1.20) (2021-09-14)
+
+
+### Bug Fixes
+
+* passive eventListeners ([64ce8cf](https://github.com/CoCreate-app/CoCreate-resize/commit/64ce8cf6e9a03d7c1cfdb97f19159e376e979f89))
+
 ## [1.1.19](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.18...v1.1.19) (2021-09-14)
 
 
