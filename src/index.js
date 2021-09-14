@@ -336,7 +336,7 @@ CoCreateResize.prototype = {
     addListenerMulti: function(element, eventNames, listener) {
         var events = eventNames.split(' ');
         for (var i = 0, iLen = events.length; i < iLen; i++) {
-            element.addEventListener(events[i], listener, false);
+            element.addEventListener(events[i], listener, { passive: false });
         }
     },
 
@@ -344,7 +344,7 @@ CoCreateResize.prototype = {
     removeListenerMulti: function(element, eventNames, listener) {
         var events = eventNames.split(' ');
         for (var i = 0, iLen = events.length; i < iLen; i++) {
-            element.removeEventListener(events[i], listener, false);
+            element.removeEventListener(events[i], listener, { passive: false });
         }
     },
 
