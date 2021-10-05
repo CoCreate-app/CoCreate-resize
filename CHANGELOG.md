@@ -1,3 +1,11 @@
+## [1.1.27](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.26...v1.1.27) (2021-10-05)
+
+
+### Bug Fixes
+
+* update dependencies ([7b99f84](https://github.com/CoCreate-app/CoCreate-resize/commit/7b99f844caef0fe8216ea0782712436fced9742e))
+* website_id in CoCreate.config ([0ea8035](https://github.com/CoCreate-app/CoCreate-resize/commit/0ea803560a4739f86d50135157244ff6ce4383b8))
+
 ## [1.1.26](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.25...v1.1.26) (2021-10-04)
 
 
