@@ -20,7 +20,7 @@ const coCreateResize = {
         this.resizers.forEach(function(resize, idx) {
             let resizeWidget = new CoCreateResize(resize, handleObj);
             _this.resizeWidgets[idx] = resizeWidget;
-        })
+        });
     },
 
     initElement: function(target) {
@@ -32,7 +32,7 @@ const coCreateResize = {
         });
         this.resizeWidgets[0] = resizeWidget;
     }
-}
+};
 
 function CoCreateResize(resizer, options) {
     this.resizeWidget = resizer;
@@ -51,8 +51,8 @@ CoCreateResize.prototype = {
             //this is for grid
             this.gridWidth = 0;
             this.gridHeight = 0;
-            this.missingWidth = 0;
-            this.missingHeight = 0;
+            // this.missingWidth = 0;
+            // this.missingHeight = 0;
             this.limitSpan = 0;
             this.widthSpan = 0;
             this.heightSpan = 0;
@@ -60,7 +60,7 @@ CoCreateResize.prototype = {
 
             DIRECTIONS.map(d => {
                 this.Drags[d] = this.resizeWidget.querySelector(handleObj['drag' + d.charAt(0).toUpperCase() + d.slice(1)]);
-            })
+            });
 
             this.bindListeners();
             this.initResize();
@@ -73,7 +73,7 @@ CoCreateResize.prototype = {
 
     getGridProperty: function() {
         let compStyles = window.getComputedStyle(this.resizeWidget.parentNode);
-        let currentCompStyles = window.getComputedStyle(this.resizeWidget);
+        // let currentCompStyles = window.getComputedStyle(this.resizeWidget);
         let gridColumns = compStyles.gridTemplateColumns;
         let height = compStyles.gridAutoRows;
         
@@ -81,14 +81,16 @@ CoCreateResize.prototype = {
         if(gridColumns !== 'none') {
             let width = gridColumns.split(' ');
             this.limitSpan = width.length;
-            this.gridWidth = Number.parseFloat(width[0]) + Number.parseInt(compStyles.gridColumnGap);
-            this.gridHeight = Number.parseInt(height) + Number.parseInt(compStyles.gridRowGap);
-            this.missingWidth = Number.parseInt(currentCompStyles.paddingRight) + Number.parseInt(currentCompStyles.paddingLeft)
-                                + Number.parseInt(currentCompStyles.marginRight) + Number.parseInt(currentCompStyles.marginLeft)
-                                + Number.parseInt(currentCompStyles.borderRight) + Number.parseInt(currentCompStyles.borderLeft);
-            this.missingHeight = Number.parseInt(currentCompStyles.paddingTop) + Number.parseInt(currentCompStyles.paddingBottom)
-                                + Number.parseInt(currentCompStyles.marginTop) + Number.parseInt(currentCompStyles.marginBottom)
-                                + Number.parseInt(currentCompStyles.borderTop) + Number.parseInt(currentCompStyles.borderBottom);
+            this.gridColumnGap = Number.parseInt(compStyles.gridColumnGap);
+            this.gridRowGap = Number.parseInt(compStyles.gridRowGap);
+            this.gridWidth = Number.parseFloat(width[0]);
+            this.gridHeight = Number.parseInt(height);
+            // this.missingWidth = Number.parseInt(currentCompStyles.paddingRight) + Number.parseInt(currentCompStyles.paddingLeft)
+            //                     + Number.parseInt(currentCompStyles.marginRight) + Number.parseInt(currentCompStyles.marginLeft)
+            //                     + Number.parseInt(currentCompStyles.borderRight) + Number.parseInt(currentCompStyles.borderLeft);
+            // this.missingHeight = Number.parseInt(currentCompStyles.paddingTop) + Number.parseInt(currentCompStyles.paddingBottom)
+            //                     + Number.parseInt(currentCompStyles.marginTop) + Number.parseInt(currentCompStyles.marginBottom)
+            //                     + Number.parseInt(currentCompStyles.borderTop) + Number.parseInt(currentCompStyles.borderBottom);
         }
     },
 
@@ -97,24 +99,24 @@ CoCreateResize.prototype = {
         {
             let compStylesOfParent = window.getComputedStyle(this.resizeWidget.parentNode);
             let spans = 0;
-            let gridColumns = compStylesOfParent.gridTemplateColumns.split(' ')
-            let temp = gridColumns[0]
+            let gridColumns = compStylesOfParent.gridTemplateColumns.split(' ');
+            let temp = gridColumns[0];
             gridColumns.map(v => {
                 if(v == temp)   spans ++;
-            })
+            });
             this.limitSpan = spans;
             if(this.resizeWidget.style['grid-column-end'])
             {
-                let curClassAttributes = this.resizeWidget.getAttribute('class').split(' ')
-                let prevColumnState = curClassAttributes[curClassAttributes.length - 1].split('_')
-                let prevSpan = Number.parseInt(prevColumnState[1])
+                let curClassAttributes = this.resizeWidget.getAttribute('class').split(' ');
+                let prevColumnState = curClassAttributes[curClassAttributes.length - 1].split('_');
+                let prevSpan = Number.parseInt(prevColumnState[1]);
                 let curColumnState = this.resizeWidget.style['grid-column-end'].split(' ');
-                let curSpan = Number.parseInt(curColumnState[1])
+                let curSpan = Number.parseInt(curColumnState[1]);
                 
                 let span = 0;
                 if(this.limitSpan >= prevSpan)   span = prevSpan;
-                else if(prevSpan > this.limitSpan) span = this.limitSpan
-                else span = Math.min(curSpan, this.limitSpan)
+                else if(prevSpan > this.limitSpan) span = this.limitSpan;
+                else span = Math.min(curSpan, this.limitSpan);
 
                 this.resizeWidget.style['grid-column-end'] = 'span ' + span;
             }
@@ -122,7 +124,7 @@ CoCreateResize.prototype = {
     },
 
     initResize: function() {
-        DIRECTIONS.map(d => { if (this.Drags[d]) this.addListenerMulti(this.Drags[d], EVENTS[0], this.checkCorners[d]); })
+        DIRECTIONS.map(d => { if (this.Drags[d]) this.addListenerMulti(this.Drags[d], EVENTS[0], this.checkCorners[d]); });
     },
 
     checkDragImplementation: function(e, from, to, offset, fcur, scur) {
@@ -185,7 +187,8 @@ CoCreateResize.prototype = {
     //this is just for grid system
     setRowEnd: function(height) {
         if(this.gridHeight) {
-            this.heightSpan = Math.ceil((height + this.missingHeight) / this.gridHeight);
+            this.heightSpan = Math.ceil((height - (this.heightSpan - 1) * this.gridRowGap) / this.gridHeight );
+            // this.heightSpan = Math.ceil((height + this.missingHeight) / this.gridHeight);
             this.resizeWidget.style['grid-row-end'] = 'span ' + this.heightSpan;
         }
     },
@@ -225,8 +228,8 @@ CoCreateResize.prototype = {
     //this is just for grid system
     setColumnEnd: function(width) {
         if(this.gridWidth) {
-            let spans = Math.ceil((width + this.missingWidth) / this.gridWidth);
-            this.widthSpan = (spans > this.limitSpan) ? this.limitSpan : spans
+            let spans = Math.ceil((width - (this.widthSpan - 1) * this.gridColumnGap) / this.gridWidth);
+            this.widthSpan = (spans > this.limitSpan) ? this.limitSpan : spans;
             this.resizeWidget.style['grid-column-end'] = 'span ' + this.widthSpan;
         }
     },
@@ -260,7 +263,7 @@ CoCreateResize.prototype = {
     },
 
     detectGrid: function() {
-        let compStyles = window.getComputedStyle(this.resizeWidget.parentNode)
+        let compStyles = window.getComputedStyle(this.resizeWidget.parentNode);
         return (compStyles.display === 'grid') ? true : false;
     },
 
@@ -276,11 +279,11 @@ CoCreateResize.prototype = {
             this.resizeWidget.style.left = null;
             this.resizeWidget.style.top = null;
 
-            if(this.widthSpan)  this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-column-end:span_' + this.widthSpan)
-            if(this.heightSpan) this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-row-end:span_' + this.heightSpan)
+            if(this.widthSpan)  this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-column-end:span_' + this.widthSpan);
+            if(this.heightSpan) this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-row-end:span_' + this.heightSpan);
         }
 
-        DIRECTIONS.map(d => { this.removeListenerMulti(document.documentElement, EVENTS[0], this.doDrags[d]); })
+        DIRECTIONS.map(d => { this.removeListenerMulti(document.documentElement, EVENTS[0], this.doDrags[d]) });
         this.removeListenerMulti(document.documentElement, EVENTS[2], this.stopDrag);
     },
     checkLeftDragTopCorner: function(e) {
@@ -354,7 +357,7 @@ CoCreateResize.prototype = {
             item.style.pointerEvents = null;
         });
     }
-}
+};
 
 observer.init({
     name: 'CoCreateResize',
@@ -364,7 +367,7 @@ observer.init({
         coCreateResize.initElement(mutation.target);
 
     }
-})
+});
 
 coCreateResize.init({
     selector: "[resizable]:not([resizable='false'])",
