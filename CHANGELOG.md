@@ -1,3 +1,10 @@
+## [1.1.29](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.28...v1.1.29) (2021-10-09)
+
+
+### Bug Fixes
+
+* calculation when to add and remove a span end ([5329825](https://github.com/CoCreate-app/CoCreate-resize/commit/5329825f5ae03f3598ccdc3ddc22d9338bf64c27))
+
 ## [1.1.28](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.27...v1.1.28) (2021-10-06)
 
 
