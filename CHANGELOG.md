@@ -1,3 +1,10 @@
+## [1.1.34](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.33...v1.1.34) (2021-10-16)
+
+
+### Bug Fixes
+
+* update socket package to fix bug in docs ([506afef](https://github.com/CoCreate-app/CoCreate-resize/commit/506afefc4e8b792379e9a553c3d532ad8992ecd9))
+
 ## [1.1.33](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.32...v1.1.33) (2021-10-15)
 
 
