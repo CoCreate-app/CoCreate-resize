@@ -1,3 +1,10 @@
+## [1.1.40](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.39...v1.1.40) (2021-11-06)
+
+
+### Bug Fixes
+
+* improved the way left, right, top and bottm are applied to elements beng resized ([c87b2c9](https://github.com/CoCreate-app/CoCreate-resize/commit/c87b2c9f621a9fb27f7ff9fce06c7198e21253f9))
+
 ## [1.1.39](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.38...v1.1.39) (2021-11-04)
 
 
