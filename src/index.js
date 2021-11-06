@@ -203,7 +203,10 @@ CoCreateResize.prototype = {
 
         if (top < 10 || height < 10)
             return;
-        this.resizeWidget.style.top = top + 'px';
+        // this.resizeWidget.style.top = top + 'px';
+        let compStyles = window.getComputedStyle(this.resizeWidget);
+        this.resizeWidget.style.bottom = compStyles.bottom;
+        this.resizeWidget.style.top = null;
         this.resizeWidget.style.height = height + 'px';
 
         this.setRowEnd(height);
@@ -220,8 +223,11 @@ CoCreateResize.prototype = {
 
         if (height < 10)
             return;
+        // this.resizeWidget.style.height = height + 'px';
+        let compStyles = window.getComputedStyle(this.resizeWidget);
+        this.resizeWidget.style.top = compStyles.top;
+        this.resizeWidget.style.bottom = null;
         this.resizeWidget.style.height = height + 'px';
-
         this.setRowEnd(height);
     },
 
@@ -243,7 +249,10 @@ CoCreateResize.prototype = {
 
         if (width < 10)
             return;
-        this.resizeWidget.style.left = left + 'px';
+        // this.resizeWidget.style.left = left + 'px';
+        let compStyles = window.getComputedStyle(this.resizeWidget);
+        this.resizeWidget.style.right = compStyles.right;
+        this.resizeWidget.style.left = null;
         this.resizeWidget.style.width = width + 'px';
 
         this.setColumnEnd(width);
@@ -257,6 +266,10 @@ CoCreateResize.prototype = {
         width = this.startWidth + e.clientX - this.startX;
         if (width < 10)
             return;
+        
+        let compStyles = window.getComputedStyle(this.resizeWidget);
+        this.resizeWidget.style.left = compStyles.left;
+        this.resizeWidget.style.right = null;
         this.resizeWidget.style.width = width + 'px';
 
         this.setColumnEnd(width);
@@ -362,7 +375,7 @@ CoCreateResize.prototype = {
 observer.init({
     name: 'CoCreateResize',
     observe: ['addedNodes'],
-	target: '.resize',
+    selector: "[resizable]:not([resizable='false'])",
     callback: function(mutation) {
         coCreateResize.initElement(mutation.target);
 
