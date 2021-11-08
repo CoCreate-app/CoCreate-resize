@@ -1,3 +1,10 @@
+## [1.1.42](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.41...v1.1.42) (2021-11-08)
+
+
+### Bug Fixes
+
+* if no resizewidget return ([be8a3db](https://github.com/CoCreate-app/CoCreate-resize/commit/be8a3dbdd7b0d58d81c259dc868a626f55a44591))
+
 ## [1.1.41](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.40...v1.1.41) (2021-11-06)
 
 
