@@ -72,6 +72,7 @@ CoCreateResize.prototype = {
     },
 
     getGridProperty: function() {
+        if(!this.resizeWidget.parentNode) return;
         let compStyles = window.getComputedStyle(this.resizeWidget.parentNode);
         // let currentCompStyles = window.getComputedStyle(this.resizeWidget);
         let gridColumns = compStyles.gridTemplateColumns;
