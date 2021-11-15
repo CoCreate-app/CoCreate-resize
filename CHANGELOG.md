@@ -1,3 +1,10 @@
+## [1.1.43](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.42...v1.1.43) (2021-11-11)
+
+
+### Bug Fixes
+
+* update readme ([d977ae8](https://github.com/CoCreate-app/CoCreate-resize/commit/d977ae8e985d4df53f7543aeecc76773bcfbd74d))
+
 ## [1.1.42](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.41...v1.1.42) (2021-11-08)
 
 
