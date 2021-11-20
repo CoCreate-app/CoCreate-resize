@@ -1,3 +1,10 @@
+## [1.1.49](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.48...v1.1.49) (2021-11-20)
+
+
+### Bug Fixes
+
+* remove cdn.CoCreate.min.css ([022208a](https://github.com/CoCreate-app/CoCreate-resize/commit/022208a3049fdf1011cc4149848292cb0e053451))
+
 ## [1.1.48](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.47...v1.1.48) (2021-11-20)
 
 
