@@ -1,3 +1,10 @@
+## [1.1.53](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.52...v1.1.53) (2021-11-27)
+
+
+### Bug Fixes
+
+* update docs api and cocreateJS script ([1d3b390](https://github.com/CoCreate-app/CoCreate-resize/commit/1d3b390cf5174e8960d4a4d4ce37dadd90f06a2e))
+
 ## [1.1.52](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.51...v1.1.52) (2021-11-26)
 
 
