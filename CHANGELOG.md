@@ -1,3 +1,10 @@
+## [1.1.58](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.57...v1.1.58) (2021-12-23)
+
+
+### Bug Fixes
+
+* renamed filter-value_type to filter-value-type ([c142fcf](https://github.com/CoCreate-app/CoCreate-resize/commit/c142fcfc8d3e03611f609cb1ab772b83f356a555))
+
 ## [1.1.57](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.56...v1.1.57) (2021-12-15)
 
 
