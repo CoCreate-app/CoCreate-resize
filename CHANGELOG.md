@@ -1,3 +1,10 @@
+## [1.1.59](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.58...v1.1.59) (2021-12-31)
+
+
+### Bug Fixes
+
+* update chart attributes ([ed83071](https://github.com/CoCreate-app/CoCreate-resize/commit/ed830713c1a128744c308316d0e6f0652bb783b2))
+
 ## [1.1.58](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.57...v1.1.58) (2021-12-23)
 
 
