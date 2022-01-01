@@ -1,3 +1,10 @@
+## [1.1.60](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.59...v1.1.60) (2022-01-01)
+
+
+### Bug Fixes
+
+* removed data- from attributes ([04abad4](https://github.com/CoCreate-app/CoCreate-resize/commit/04abad4ff27e9255c0226463cb8fe9c83a849fac))
+
 ## [1.1.59](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.58...v1.1.59) (2021-12-31)
 
 
