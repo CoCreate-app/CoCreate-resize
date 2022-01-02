@@ -1,3 +1,10 @@
+## [1.1.62](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.61...v1.1.62) (2022-01-02)
+
+
+### Bug Fixes
+
+* use get-value-key and setvalue-key instead of fetch-for render-json ([5158ed3](https://github.com/CoCreate-app/CoCreate-resize/commit/5158ed37c25173683a3a651998c6513c81d1b596))
+
 ## [1.1.61](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.60...v1.1.61) (2022-01-01)
 
 
