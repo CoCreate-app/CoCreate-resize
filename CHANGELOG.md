@@ -1,3 +1,10 @@
+## [1.1.63](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.62...v1.1.63) (2022-01-16)
+
+
+### Bug Fixes
+
+* update class overflow:overlay to overflow:auto ([6592446](https://github.com/CoCreate-app/CoCreate-resize/commit/6592446f1e5ca51404ae62242e0c17385408205a))
+
 ## [1.1.62](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.61...v1.1.62) (2022-01-02)
 
 
