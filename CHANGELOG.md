@@ -1,3 +1,10 @@
+## [1.1.65](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.64...v1.1.65) (2022-02-03)
+
+
+### Bug Fixes
+
+* replaced show and hide class hidden with attribute hidden ([18c8b0d](https://github.com/CoCreate-app/CoCreate-resize/commit/18c8b0d33ad671e4f527e09a71c06eddd6cfb77e))
+
 ## [1.1.64](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.63...v1.1.64) (2022-02-01)
 
 
