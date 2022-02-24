@@ -1,3 +1,10 @@
+## [1.1.69](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.68...v1.1.69) (2022-02-24)
+
+
+### Bug Fixes
+
+* CoCreate.config replace CoCreate.app with * ([61f8e57](https://github.com/CoCreate-app/CoCreate-resize/commit/61f8e5748f9312fc2a6d074fd526fade20c9ddee))
+
 ## [1.1.68](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.67...v1.1.68) (2022-02-16)
 
 
