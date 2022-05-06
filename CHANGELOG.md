@@ -1,3 +1,10 @@
+## [1.1.70](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.69...v1.1.70) (2022-05-06)
+
+
+### Bug Fixes
+
+* update config organization_Id to organization_id ([b141139](https://github.com/CoCreate-app/CoCreate-resize/commit/b1411398f4114a241a4bc1804b8e1c6945584e0f))
+
 ## [1.1.69](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.68...v1.1.69) (2022-02-24)
 
 
