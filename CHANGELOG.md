@@ -1,3 +1,10 @@
+## [1.1.71](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.70...v1.1.71) (2022-05-19)
+
+
+### Bug Fixes
+
+* update document_id on link index.css ([ae7f40b](https://github.com/CoCreate-app/CoCreate-resize/commit/ae7f40b5a1eab689ebb4b8535dd47b94de1ff17a))
+
 ## [1.1.70](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.69...v1.1.70) (2022-05-06)
 
 
