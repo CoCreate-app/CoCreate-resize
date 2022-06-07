@@ -1,3 +1,10 @@
+## [1.1.73](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.72...v1.1.73) (2022-06-07)
+
+
+### Bug Fixes
+
+* left postion missing px when adding style ([b1019b7](https://github.com/CoCreate-app/CoCreate-resize/commit/b1019b7bd32c47c2537031ea284f69cb73442ea9))
+
 ## [1.1.72](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.71...v1.1.72) (2022-05-23)
 
 
