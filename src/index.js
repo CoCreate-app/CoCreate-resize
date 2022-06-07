@@ -49,6 +49,7 @@ CoCreateResize.prototype = {
             this.Drags = [];
             
             //this is for grid
+            this.isGrid = this.detectGrid();
             this.gridWidth = 0;
             this.gridHeight = 0;
             // this.missingWidth = 0;
@@ -246,14 +247,16 @@ CoCreateResize.prototype = {
         if (e.touches)
             e = e.touches[0];
         left = this.startLeft + e.clientX - this.startX;
+        console.log('left', left)
         width = this.startWidth - e.clientX + this.startX;
 
         if (width < 10)
             return;
-        // this.resizeWidget.style.left = left + 'px';
-        let compStyles = window.getComputedStyle(this.resizeWidget);
-        this.resizeWidget.style.right = compStyles.right;
-        this.resizeWidget.style.left = null;
+        if (!this.isGrid)
+            this.resizeWidget.style.left = left + 'px';
+        // let compStyles = window.getComputedStyle(this.resizeWidget);
+        // this.resizeWidget.style.right = compStyles.right;
+        // this.resizeWidget.style.left = null;
         this.resizeWidget.style.width = width + 'px';
 
         this.setColumnEnd(width);
@@ -278,7 +281,9 @@ CoCreateResize.prototype = {
 
     detectGrid: function() {
         let compStyles = window.getComputedStyle(this.resizeWidget.parentNode);
-        return (compStyles.display === 'grid') ? true : false;
+        let isGrid = (compStyles.display === 'grid') ? true : false;
+        this.isGrid = isGrid;
+        return isGrid
     },
 
     stopDrag: function(e) {
