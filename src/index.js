@@ -280,10 +280,13 @@ CoCreateResize.prototype = {
     },
 
     detectGrid: function() {
-        let compStyles = window.getComputedStyle(this.resizeWidget.parentNode);
-        let isGrid = (compStyles.display === 'grid') ? true : false;
+        let isGrid = false;
+        if (this.resizeWidget.parentNode) {
+            let compStyles = window.getComputedStyle(this.resizeWidget.parentNode);
+            isGrid = (compStyles.display === 'grid');
+        }
         this.isGrid = isGrid;
-        return isGrid
+        return isGrid;
     },
 
     stopDrag: function(e) {
@@ -339,7 +342,6 @@ CoCreateResize.prototype = {
         this.initDrags['left'] = this.initLeftDrag.bind(this);
         this.initDrags['bottom'] = this.initBottomDrag.bind(this);
         this.initDrags['right'] = this.initRightDrag.bind(this);
-
     },
 
     getDistance: function(elem, flag) {
