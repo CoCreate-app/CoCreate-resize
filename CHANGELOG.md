@@ -1,3 +1,10 @@
+## [1.1.74](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.73...v1.1.74) (2022-06-08)
+
+
+### Bug Fixes
+
+* if detectGrid has no parent element return ([cb0a6fd](https://github.com/CoCreate-app/CoCreate-resize/commit/cb0a6fd7f9b45fdc66879ff6e2737d5363321eb3))
+
 ## [1.1.73](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.72...v1.1.73) (2022-06-07)
 
 
