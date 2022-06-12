@@ -1,3 +1,12 @@
+## [1.1.75](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.74...v1.1.75) (2022-06-12)
+
+
+### Bug Fixes
+
+* update dependencies ([ec46092](https://github.com/CoCreate-app/CoCreate-resize/commit/ec460926168a1eda3ce16048746af2686d88e105))
+* update docs css document_id ([173bda0](https://github.com/CoCreate-app/CoCreate-resize/commit/173bda0d16d435624093dc845bf246b2ed22be40))
+* update modal btn to actions ([b8b5acc](https://github.com/CoCreate-app/CoCreate-resize/commit/b8b5acc1e27a1b41238f9fc9fe4bafa400413da0))
+
 ## [1.1.74](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.73...v1.1.74) (2022-06-08)
 
 
