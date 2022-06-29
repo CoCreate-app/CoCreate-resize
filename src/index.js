@@ -52,8 +52,6 @@ CoCreateResize.prototype = {
             this.isGrid = this.detectGrid();
             this.gridWidth = 0;
             this.gridHeight = 0;
-            // this.missingWidth = 0;
-            // this.missingHeight = 0;
             this.limitSpan = 0;
             this.widthSpan = 0;
             this.heightSpan = 0;
@@ -75,11 +73,9 @@ CoCreateResize.prototype = {
     getGridProperty: function() {
         if(!this.resizeWidget.parentNode) return;
         let compStyles = window.getComputedStyle(this.resizeWidget.parentNode);
-        // let currentCompStyles = window.getComputedStyle(this.resizeWidget);
         let gridColumns = compStyles.gridTemplateColumns;
         let height = compStyles.gridAutoRows;
         
-        // console.log(compStyles)
         if(gridColumns !== 'none') {
             let width = gridColumns.split(' ');
             this.limitSpan = width.length;
@@ -87,12 +83,6 @@ CoCreateResize.prototype = {
             this.gridRowGap = Number.parseInt(compStyles.gridRowGap);
             this.gridWidth = Number.parseFloat(width[0]);
             this.gridHeight = Number.parseInt(height);
-            // this.missingWidth = Number.parseInt(currentCompStyles.paddingRight) + Number.parseInt(currentCompStyles.paddingLeft)
-            //                     + Number.parseInt(currentCompStyles.marginRight) + Number.parseInt(currentCompStyles.marginLeft)
-            //                     + Number.parseInt(currentCompStyles.borderRight) + Number.parseInt(currentCompStyles.borderLeft);
-            // this.missingHeight = Number.parseInt(currentCompStyles.paddingTop) + Number.parseInt(currentCompStyles.paddingBottom)
-            //                     + Number.parseInt(currentCompStyles.marginTop) + Number.parseInt(currentCompStyles.marginBottom)
-            //                     + Number.parseInt(currentCompStyles.borderTop) + Number.parseInt(currentCompStyles.borderBottom);
         }
     },
 
@@ -126,15 +116,29 @@ CoCreateResize.prototype = {
     },
 
     initResize: function() {
-        DIRECTIONS.map(d => { if (this.Drags[d]) this.addListenerMulti(this.Drags[d], EVENTS[0], this.checkCorners[d]); });
+        DIRECTIONS.map(d => { 
+            if (this.Drags[d]) 
+                this.addListenerMulti(this.Drags[d], EVENTS[0], this.checkCorners[d]); 
+            console.log('checkCorner', this.checkCorners[d])
+            console.log('drags', this.Drags[d])
+        });
     },
 
     checkDragImplementation: function(e, from, to, offset, fcur, scur) {
         if (e.touches)
             e = e.touches[0];
-
+        let other;
+        if (to == 'top')
+            other = 'bottom'
+        else if (to == 'bottom')
+            other = 'top'
+        else if (to == 'left')
+            other = 'right'
+        else if (to == 'right')
+            other = 'left'
         this.removeListenerMulti(this.Drags[from], EVENTS[1], this.initDrags[from]);
         this.removeListenerMulti(this.Drags[from], EVENTS[1], this.initDrags[to]);
+        this.removeListenerMulti(this.Drags[from], EVENTS[1], this.initDrags[other]);
         this.addListenerMulti(this.Drags[from], EVENTS[1], this.initDrags[from]);
 
         if (offset < this.cornerSize && this.Drags[to]) {
@@ -147,6 +151,12 @@ CoCreateResize.prototype = {
     },
 
     initDrag: function(e, idx) {
+        e.preventDefault();
+
+        if (!this.resizeWidget.hasAttribute('resizing')){
+            this.resizeWidget.setAttribute('resizing', '')
+        }
+
         let selector = document.defaultView.getComputedStyle(this.resizeWidget);
         this.processIframe();
 
@@ -175,22 +185,26 @@ CoCreateResize.prototype = {
 
     initTopDrag: function(e) {
         this.initDrag(e, 'top');
+        console.log('resize-top')
     },
     initBottomDrag: function(e) {
         this.initDrag(e, 'bottom');
+        console.log('resize-bottom')
     },
     initLeftDrag: function(e) {
         this.initDrag(e, 'left');
+        console.log('resize-left')
+
     },
     initRightDrag: function(e) {
         this.initDrag(e, 'right');
+        console.log('resize-right')
     },
 
     //this is just for grid system
     setRowEnd: function(height) {
         if(this.gridHeight) {
             this.heightSpan = Math.ceil((height - (this.heightSpan - 1) * this.gridRowGap) / this.gridHeight );
-            // this.heightSpan = Math.ceil((height + this.missingHeight) / this.gridHeight);
             this.resizeWidget.style['grid-row-end'] = 'span ' + this.heightSpan;
         }
     },
@@ -203,20 +217,18 @@ CoCreateResize.prototype = {
         top = this.startTop + e.clientY - this.startY;
         height = this.startHeight - e.clientY + this.startY;
 
-        if (top < 10 || height < 10)
+        if (height < 10)
             return;
-        // this.resizeWidget.style.top = top + 'px';
-        let compStyles = window.getComputedStyle(this.resizeWidget);
-        this.resizeWidget.style.bottom = compStyles.bottom;
-        this.resizeWidget.style.top = null;
+        if (!this.isGrid)
+            this.resizeWidget.style.top = top + 'px';
+            
         this.resizeWidget.style.height = height + 'px';
-
         this.setRowEnd(height);
     },
 
 
     doBottomDrag: function(e) {
-        let height = 0;
+        let height;
 
         if (e.touches)
             e = e.touches[0];
@@ -225,10 +237,7 @@ CoCreateResize.prototype = {
 
         if (height < 10)
             return;
-        // this.resizeWidget.style.height = height + 'px';
-        let compStyles = window.getComputedStyle(this.resizeWidget);
-        this.resizeWidget.style.top = compStyles.top;
-        this.resizeWidget.style.bottom = null;
+
         this.resizeWidget.style.height = height + 'px';
         this.setRowEnd(height);
     },
@@ -254,28 +263,21 @@ CoCreateResize.prototype = {
             return;
         if (!this.isGrid)
             this.resizeWidget.style.left = left + 'px';
-        // let compStyles = window.getComputedStyle(this.resizeWidget);
-        // this.resizeWidget.style.right = compStyles.right;
-        // this.resizeWidget.style.left = null;
-        this.resizeWidget.style.width = width + 'px';
 
+        this.resizeWidget.style.width = width + 'px';
         this.setColumnEnd(width);
     },
 
 
     doRightDrag: function(e) {
-        let width = 0;
+        let width;
         if (e.touches)
             e = e.touches[0];
         width = this.startWidth + e.clientX - this.startX;
         if (width < 10)
             return;
-        
-        let compStyles = window.getComputedStyle(this.resizeWidget);
-        this.resizeWidget.style.left = compStyles.left;
-        this.resizeWidget.style.right = null;
-        this.resizeWidget.style.width = width + 'px';
 
+        this.resizeWidget.style.width = width + 'px';
         this.setColumnEnd(width);
     },
 
@@ -293,6 +295,9 @@ CoCreateResize.prototype = {
         document.querySelectorAll('iframe').forEach(function(item) {
             item.style.pointerEvents = null;
         });
+        if (this.resizeWidget.hasAttribute('resizing')){
+            this.resizeWidget.removeAttribute('resizing', '')
+        }
 
         //this is just for grid system
         if(this.detectGrid()) {
@@ -308,21 +313,41 @@ CoCreateResize.prototype = {
         DIRECTIONS.map(d => { this.removeListenerMulti(document.documentElement, EVENTS[0], this.doDrags[d]) });
         this.removeListenerMulti(document.documentElement, EVENTS[2], this.stopDrag);
     },
-    checkLeftDragTopCorner: function(e) {
-        const offset = e.clientY - this.getDistance(this.Drags['left'], true) + document.documentElement.scrollTop;
-        this.checkDragImplementation(e, 'left', 'top', offset, 'se-resize', 'e-resize');
+    checkLeftCorners: function(e) {
+        let offset = e.clientY - this.getDistance(this.Drags['left'], true) + document.documentElement.scrollTop;
+        if (offset > 10) {
+            offset = this.getDistance(this.Drags['left'], true) + this.Drags['left'].clientHeight - e.clientY - document.documentElement.scrollTop;
+            this.checkDragImplementation(e, 'left', 'bottom', offset, 'ne-resize', 'e-resize');
+        } else {
+            this.checkDragImplementation(e, 'left', 'top', offset, 'se-resize', 'e-resize');
+        }
     },
-    checkTopDragRightCorner: function(e) {
-        const offset = this.getDistance(this.Drags['right'], false) - e.clientX - document.documentElement.scrollLeft;
-        this.checkDragImplementation(e, 'top', 'right', offset, 'ne-resize', 's-resize');
+    checkTopCorners: function(e) {
+        let offset = e.clientX - this.getDistance(this.Drags['top'], false) + document.documentElement.scrollTop;
+        if (offset > 10) {
+            offset = this.getDistance(this.Drags['top'], false) + this.Drags['top'].clientWidth - e.clientX - document.documentElement.scrollLeft;
+            this.checkDragImplementation(e, 'top', 'right', offset, 'ne-resize', 's-resize');
+        } else {
+            this.checkDragImplementation(e, 'top', 'left', offset, 'se-resize', 's-resize');
+        }
     },
-    checkBottomDragLeftCorner: function(e) {
-        const offset = e.clientX - this.getDistance(this.Drags['bottom'], false) + document.documentElement.scrollLeft;
-        this.checkDragImplementation(e, 'bottom', 'left', offset, 'ne-resize', 's-resize');
+    checkBottomCorners: function(e) {
+        let offset = e.clientX - this.getDistance(this.Drags['bottom'], false) + document.documentElement.scrollTop;
+        if (offset > 10) {
+            offset = this.getDistance(this.Drags['bottom'], false) + this.Drags['bottom'].clientWidth - e.clientX - document.documentElement.scrollLeft;
+            this.checkDragImplementation(e, 'bottom', 'right', offset, 'se-resize', 's-resize');
+        } else {
+            this.checkDragImplementation(e, 'bottom', 'left', offset, 'ne-resize', 's-resize');
+        }
     },
-    checkRightDragBottomCorner: function(e) {
-        const offset = this.getDistance(this.Drags['bottom'], true) - e.clientY - document.documentElement.scrollTop;
-        this.checkDragImplementation(e, 'right', 'bottom', offset, 'se-resize', 'e-resize');
+    checkRightCorners: function(e) {
+        let offset = e.clientY - this.getDistance(this.Drags['right'], true) + document.documentElement.scrollTop;
+        if (offset > 10) {
+            offset = this.getDistance(this.Drags['right'], true) + this.Drags['right'].clientHeight - e.clientY - document.documentElement.scrollTop;
+            this.checkDragImplementation(e, 'right', 'bottom', offset, 'se-resize', 'e-resize');
+        } else {
+            this.checkDragImplementation(e, 'right', 'top', offset, 'ne-resize', 'e-resize');
+        }
     },
 
     bindListeners: function() {
@@ -333,10 +358,10 @@ CoCreateResize.prototype = {
 
         this.stopDrag = this.stopDrag.bind(this);
 
-        this.checkCorners['left'] = this.checkLeftDragTopCorner.bind(this);
-        this.checkCorners['top'] = this.checkTopDragRightCorner.bind(this);
-        this.checkCorners['bottom'] = this.checkBottomDragLeftCorner.bind(this);
-        this.checkCorners['right'] = this.checkRightDragBottomCorner.bind(this);
+        this.checkCorners['left'] = this.checkLeftCorners.bind(this);
+        this.checkCorners['top'] = this.checkTopCorners.bind(this);
+        this.checkCorners['bottom'] = this.checkBottomCorners.bind(this);
+        this.checkCorners['right'] = this.checkRightCorners.bind(this);
 
         this.initDrags['top'] = this.initTopDrag.bind(this);
         this.initDrags['left'] = this.initLeftDrag.bind(this);
