@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.76...v1.2.0) (2022-06-29)
+
+
+### Bug Fixes
+
+* bug when resizing from corners ([293a478](https://github.com/CoCreate-app/CoCreate-resize/commit/293a47828b662c96cfb4b34bd5f1f7b7e608fa5f))
+
+
+### Features
+
+* if closest element is contentEditable use crdt text functiontions to insert styles resulting from resize ([4e8668e](https://github.com/CoCreate-app/CoCreate-resize/commit/4e8668e23d7fe9502258d676eebc170eb9771995))
+
 ## [1.1.76](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.75...v1.1.76) (2022-06-18)
 
 
