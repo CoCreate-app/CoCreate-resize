@@ -206,6 +206,7 @@ CoCreateResize.prototype = {
         if(this.gridHeight) {
             this.heightSpan = Math.ceil((height - (this.heightSpan - 1) * this.gridRowGap) / this.gridHeight );
             this.resizeWidget.style['grid-row-end'] = 'span ' + this.heightSpan;
+            this.collaborate({rowEnd: this.heightSpan})
         }
     },
 
@@ -219,9 +220,10 @@ CoCreateResize.prototype = {
 
         if (height < 10)
             return;
-        if (!this.isGrid)
+        if (!this.isGrid) {
             this.resizeWidget.style.top = top + 'px';
-            
+            this.collaborate({top, height})
+        }
         this.resizeWidget.style.height = height + 'px';
         this.setRowEnd(height);
     },
@@ -237,7 +239,9 @@ CoCreateResize.prototype = {
 
         if (height < 10)
             return;
-
+        if (!this.isGrid)
+            this.collaborate({height})
+    
         this.resizeWidget.style.height = height + 'px';
         this.setRowEnd(height);
     },
@@ -248,6 +252,7 @@ CoCreateResize.prototype = {
             let spans = Math.ceil((width - (this.widthSpan - 1) * this.gridColumnGap) / this.gridWidth);
             this.widthSpan = (spans > this.limitSpan) ? this.limitSpan : spans;
             this.resizeWidget.style['grid-column-end'] = 'span ' + this.widthSpan;
+            this.collaborate({columnEnd: this.widthSpan})
         }
     },
 
@@ -261,8 +266,10 @@ CoCreateResize.prototype = {
 
         if (width < 10)
             return;
-        if (!this.isGrid)
+        if (!this.isGrid) {
             this.resizeWidget.style.left = left + 'px';
+            this.collaborate({left, width})
+        }
 
         this.resizeWidget.style.width = width + 'px';
         this.setColumnEnd(width);
@@ -277,6 +284,9 @@ CoCreateResize.prototype = {
         if (width < 10)
             return;
 
+        if (!this.isGrid)
+            this.collaborate({width})
+    
         this.resizeWidget.style.width = width + 'px';
         this.setColumnEnd(width);
     },
@@ -402,6 +412,38 @@ CoCreateResize.prototype = {
         document.querySelectorAll('iframe').forEach(function(item) {
             item.style.pointerEvents = null;
         });
+    },
+
+    collaborate: function({left, top, width, height, rowEnd, columnEnd}) {
+        if (window.CoCreate && window.CoCreate.text) {
+            let domTextEditor = this.resizeWidget.closest('[contenteditable]');
+            if (domTextEditor){
+                if (left)
+                    CoCreate.text.setStyle({ 
+                        domTextEditor, target: this.resizeWidget, property: 'left', value: left + 'px' 
+                    })
+                if (top)
+                    CoCreate.text.setStyle({ 
+                        domTextEditor, target: this.resizeWidget, property: 'top', value: top + 'px' 
+                    })
+                if (width)
+                    CoCreate.text.setStyle({ 
+                        domTextEditor, target: this.resizeWidget, property: 'width', value: width + 'px' 
+                    })
+                if (height)
+                    CoCreate.text.setStyle({ 
+                        domTextEditor, target: this.resizeWidget, property: 'height', value: height + 'px' 
+                    })
+                if (rowEnd)
+                    CoCreate.text.setStyle({ 
+                        domTextEditor, target: this.resizeWidget, property: 'grid-row-end', value: 'span ' + rowEnd 
+                    })
+                if (columnEnd)
+                    CoCreate.text.setStyle({ 
+                        domTextEditor, target: this.resizeWidget, property: 'grid-column-end', value: 'span ' + columnEnd 
+                    })
+            }
+        }
     }
 };
 
