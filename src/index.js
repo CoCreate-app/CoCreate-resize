@@ -119,8 +119,6 @@ CoCreateResize.prototype = {
         DIRECTIONS.map(d => { 
             if (this.Drags[d]) 
                 this.addListenerMulti(this.Drags[d], EVENTS[0], this.checkCorners[d]); 
-            console.log('checkCorner', this.checkCorners[d])
-            console.log('drags', this.Drags[d])
         });
     },
 
@@ -185,20 +183,16 @@ CoCreateResize.prototype = {
 
     initTopDrag: function(e) {
         this.initDrag(e, 'top');
-        console.log('resize-top')
     },
     initBottomDrag: function(e) {
         this.initDrag(e, 'bottom');
-        console.log('resize-bottom')
     },
     initLeftDrag: function(e) {
         this.initDrag(e, 'left');
-        console.log('resize-left')
 
     },
     initRightDrag: function(e) {
         this.initDrag(e, 'right');
-        console.log('resize-right')
     },
 
     //this is just for grid system
@@ -261,7 +255,6 @@ CoCreateResize.prototype = {
         if (e.touches)
             e = e.touches[0];
         left = this.startLeft + e.clientX - this.startX;
-        console.log('left', left)
         width = this.startWidth - e.clientX + this.startX;
 
         if (width < 10)
