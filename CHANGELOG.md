@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.0...v1.2.1) (2022-07-03)
+
+
+### Bug Fixes
+
+* removed console.logs ([884c02e](https://github.com/CoCreate-app/CoCreate-resize/commit/884c02e8aeef5805d9269dbc0de518ff41789d11))
+
 # [1.2.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.1.76...v1.2.0) (2022-06-29)
 
 
