@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.1...v1.2.2) (2022-08-19)
+
+
+### Bug Fixes
+
+* renamed order-by and order-type to filter-order-name and filter-order-type ([0f6c9e6](https://github.com/CoCreate-app/CoCreate-resize/commit/0f6c9e645cbdc750b5af1b1ea13dd9a934662889))
+
 ## [1.2.1](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.0...v1.2.1) (2022-07-03)
 
 
