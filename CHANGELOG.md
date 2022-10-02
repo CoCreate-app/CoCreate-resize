@@ -1,3 +1,10 @@
+## [1.2.9](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.8...v1.2.9) (2022-10-02)
+
+
+### Bug Fixes
+
+* bump @cocreate/hosting and @cocreate/socket-client ([d2c9a4f](https://github.com/CoCreate-app/CoCreate-resize/commit/d2c9a4ff063a7b1b777ee6887b216a3316843c4b))
+
 ## [1.2.8](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.7...v1.2.8) (2022-10-01)
 
 
