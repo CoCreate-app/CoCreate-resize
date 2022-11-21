@@ -1,3 +1,10 @@
+## [1.2.14](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.13...v1.2.14) (2022-11-21)
+
+
+### Bug Fixes
+
+* replaced document_id with document._id ([8b34ff2](https://github.com/CoCreate-app/CoCreate-resize/commit/8b34ff2fdf4b82e43f7e0e8d1b0653efa224907d))
+
 ## [1.2.13](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.12...v1.2.13) (2022-11-21)
 
 
