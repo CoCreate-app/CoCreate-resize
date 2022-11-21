@@ -1,3 +1,12 @@
+## [1.2.11](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.10...v1.2.11) (2022-11-21)
+
+
+### Bug Fixes
+
+* filter-order attributes renamed to filter-sort ([a9eb216](https://github.com/CoCreate-app/CoCreate-resize/commit/a9eb2164e103fb2ba9dab5ed3515e3bb308909a0))
+* missing fetch-document ([cca6fba](https://github.com/CoCreate-app/CoCreate-resize/commit/cca6fba35483f9b0b4e0bcfc688379619f3a4b74))
+* renamed {{data.key}} to {{document.key}} ([cd31dd4](https://github.com/CoCreate-app/CoCreate-resize/commit/cd31dd4cf5e2a6efe24dad5cbd947a7268e57216))
+
 ## [1.2.10](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.9...v1.2.10) (2022-10-02)
 
 
