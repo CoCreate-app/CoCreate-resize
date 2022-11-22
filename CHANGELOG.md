@@ -1,3 +1,10 @@
+## [1.2.17](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.16...v1.2.17) (2022-11-22)
+
+
+### Bug Fixes
+
+* workflow docs ([445f06c](https://github.com/CoCreate-app/CoCreate-resize/commit/445f06c6f51ee708f2230b723f7a582c66a57ffb))
+
 ## [1.2.16](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.15...v1.2.16) (2022-11-22)
 
 
