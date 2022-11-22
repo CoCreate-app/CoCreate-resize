@@ -1,3 +1,10 @@
+## [1.2.16](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.15...v1.2.16) (2022-11-22)
+
+
+### Bug Fixes
+
+* apply src: {{source}} to CoCreate.config ([e4d0000](https://github.com/CoCreate-app/CoCreate-resize/commit/e4d00004304a24049a12979c3c8f8b157b8e7b64))
+
 ## [1.2.15](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.14...v1.2.15) (2022-11-21)
 
 
