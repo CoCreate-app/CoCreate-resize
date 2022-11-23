@@ -71,12 +71,12 @@ CoCreateResize.prototype = {
     },
 
     getGridProperty: function() {
-        if(!this.resizeWidget.parentNode) return;
+        if (!this.resizeWidget.parentNode) return;
         let compStyles = window.getComputedStyle(this.resizeWidget.parentNode);
         let gridColumns = compStyles.gridTemplateColumns;
         let height = compStyles.gridAutoRows;
         
-        if(gridColumns !== 'none') {
+        if (gridColumns !== 'none') {
             let width = gridColumns.split(' ');
             this.limitSpan = width.length;
             this.gridColumnGap = Number.parseInt(compStyles.gridColumnGap);
@@ -87,17 +87,17 @@ CoCreateResize.prototype = {
     },
 
     checkGridColumns: function() {
-        if(typeof this.resizeWidget !== 'undefined' && this.resizeWidget.parentNode)
+        if (typeof this.resizeWidget !== 'undefined' && this.resizeWidget.parentNode)
         {
             let compStylesOfParent = window.getComputedStyle(this.resizeWidget.parentNode);
             let spans = 0;
             let gridColumns = compStylesOfParent.gridTemplateColumns.split(' ');
             let temp = gridColumns[0];
             gridColumns.map(v => {
-                if(v == temp)   spans ++;
+                if (v == temp)   spans ++;
             });
             this.limitSpan = spans;
-            if(this.resizeWidget.style['grid-column-end'])
+            if (this.resizeWidget.style['grid-column-end'])
             {
                 let curClassAttributes = this.resizeWidget.getAttribute('class').split(' ');
                 let prevColumnState = curClassAttributes[curClassAttributes.length - 1].split('_');
@@ -106,8 +106,8 @@ CoCreateResize.prototype = {
                 let curSpan = Number.parseInt(curColumnState[1]);
                 
                 let span = 0;
-                if(this.limitSpan >= prevSpan)   span = prevSpan;
-                else if(prevSpan > this.limitSpan) span = this.limitSpan;
+                if (this.limitSpan >= prevSpan)   span = prevSpan;
+                else if (prevSpan > this.limitSpan) span = this.limitSpan;
                 else span = Math.min(curSpan, this.limitSpan);
 
                 this.resizeWidget.style['grid-column-end'] = 'span ' + span;
@@ -197,7 +197,7 @@ CoCreateResize.prototype = {
 
     //this is just for grid system
     setRowEnd: function(height) {
-        if(this.gridHeight) {
+        if (this.gridHeight) {
             this.heightSpan = Math.ceil((height - (this.heightSpan - 1) * this.gridRowGap) / this.gridHeight );
             this.resizeWidget.style['grid-row-end'] = 'span ' + this.heightSpan;
             this.collaborate({rowEnd: this.heightSpan})
@@ -242,7 +242,7 @@ CoCreateResize.prototype = {
 
     //this is just for grid system
     setColumnEnd: function(width) {
-        if(this.gridWidth) {
+        if (this.gridWidth) {
             let spans = Math.ceil((width - (this.widthSpan - 1) * this.gridColumnGap) / this.gridWidth);
             this.widthSpan = (spans > this.limitSpan) ? this.limitSpan : spans;
             this.resizeWidget.style['grid-column-end'] = 'span ' + this.widthSpan;
@@ -303,14 +303,14 @@ CoCreateResize.prototype = {
         }
 
         //this is just for grid system
-        if(this.detectGrid()) {
+        if (this.detectGrid()) {
             this.resizeWidget.style.width = null;
             this.resizeWidget.style.height = null;
             this.resizeWidget.style.left = null;
             this.resizeWidget.style.top = null;
 
-            if(this.widthSpan)  this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-column-end:span_' + this.widthSpan);
-            if(this.heightSpan) this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-row-end:span_' + this.heightSpan);
+            if (this.widthSpan)  this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-column-end:span_' + this.widthSpan);
+            if (this.heightSpan) this.resizeWidget.setAttribute('class', this.originClassAttribute + ' grid-row-end:span_' + this.heightSpan);
         }
 
         DIRECTIONS.map(d => { this.removeListenerMulti(document.documentElement, EVENTS[0], this.doDrags[d]) });
