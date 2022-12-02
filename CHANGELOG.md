@@ -1,3 +1,11 @@
+## [1.2.25](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.24...v1.2.25) (2022-12-02)
+
+
+### Bug Fixes
+
+* bump dependencies ([3f3ed7f](https://github.com/CoCreate-app/CoCreate-resize/commit/3f3ed7f1679877217f56563d4f3146d93ad499fc))
+* renamed filter-sort-type to filter-sort-direction ([53f4c61](https://github.com/CoCreate-app/CoCreate-resize/commit/53f4c61f50e8d88b617cee2328b5349e53588b5e))
+
 ## [1.2.24](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.23...v1.2.24) (2022-11-28)
 
 
