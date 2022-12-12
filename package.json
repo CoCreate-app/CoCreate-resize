@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/resize",
-  "version": "1.2.31",
+  "version": "1.2.32",
   "description": "A light weight resize handler make any element resizable by adding data attributes or usinng init object. Great for Customized text box or text area.",
   "keywords": [
     "resize",
@@ -20,7 +20,9 @@
     "html5-framework",
     "javascript-framework"
   ],
-  "publishConfig": { "access": "public" },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "npx webpack --config webpack.config.js",
     "build": "NODE_ENV=production npx webpack --config webpack.config.js",
@@ -33,7 +35,9 @@
   },
   "author": "CoCreate LLC",
   "license": "MIT",
-  "bugs": { "url": "https://github.com/CoCreate-app/CoCreate-resize/issues" },
+  "bugs": {
+    "url": "https://github.com/CoCreate-app/CoCreate-resize/issues"
+  },
   "homepage": "https://cocreate.app/docs/resize",
   "funding": {
     "type": "GitHub Sponsors ❤",
