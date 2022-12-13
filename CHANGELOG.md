@@ -1,3 +1,10 @@
+## [1.2.34](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.33...v1.2.34) (2022-12-13)
+
+
+### Bug Fixes
+
+* removed un used devDependencies ([19828a0](https://github.com/CoCreate-app/CoCreate-resize/commit/19828a0d921f0d05d271d889bb8bdba671a3b05b))
+
 ## [1.2.33](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.32...v1.2.33) (2022-12-13)
 
 
