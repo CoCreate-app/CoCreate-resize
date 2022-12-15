@@ -1,3 +1,10 @@
+## [1.2.35](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.34...v1.2.35) (2022-12-15)
+
+
+### Bug Fixes
+
+* add missing dev dependency style-loader ([3da51e1](https://github.com/CoCreate-app/CoCreate-resize/commit/3da51e1e3d343aed9de226436612b687bb6b38da))
+
 ## [1.2.34](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.33...v1.2.34) (2022-12-13)
 
 
