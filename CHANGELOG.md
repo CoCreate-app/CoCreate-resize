@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.35...v1.3.0) (2022-12-20)
+
+
+### Bug Fixes
+
+* bump dependencies ([f89c206](https://github.com/CoCreate-app/CoCreate-resize/commit/f89c206b33fc91cf4efd9df925771b758458537c))
+
+
+### Features
+
+* apply styleTag to insert and remove style pointer-events none on iframes during resize ([8c86165](https://github.com/CoCreate-app/CoCreate-resize/commit/8c86165028c23ad850c9f4e693cb3c8bd7ca7668))
+
 ## [1.2.35](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.2.34...v1.2.35) (2022-12-15)
 
 
