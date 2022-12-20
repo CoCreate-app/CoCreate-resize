@@ -5,6 +5,11 @@ import "./index.css";
 const EVENTS = ['mousemove touchmove', 'mousedown touchstart', 'mouseup touchend'];
 const DIRECTIONS = ['left', 'right', 'top', 'bottom'];
 
+const styleEl = document.createElement("style");
+styleEl.setAttribute('component', 'resize');
+document.head.appendChild(styleEl);
+const styleSheet = styleEl.sheet;
+
 const coCreateResize = {
     selector: '', //'.resize',
     resizers: [],
@@ -156,7 +161,7 @@ CoCreateResize.prototype = {
         }
 
         let selector = document.defaultView.getComputedStyle(this.resizeWidget);
-        this.processIframe();
+        styleSheet.insertRule('iframe {pointer-events: none}', 0)
 
         if (idx == 'top' || idx == 'bottom') {
             this.startTop = parseInt(selector.top, 10);
@@ -295,9 +300,7 @@ CoCreateResize.prototype = {
     },
 
     stopDrag: function(e) {
-        document.querySelectorAll('iframe').forEach(function(item) {
-            item.style.pointerEvents = null;
-        });
+        styleSheet.deleteRule(0)
         if (this.resizeWidget.hasAttribute('resizing')){
             this.resizeWidget.removeAttribute('resizing', '')
         }
@@ -400,17 +403,10 @@ CoCreateResize.prototype = {
         }
     },
 
-    // style="pointer-events:none" for iframe when drag event starts
-    processIframe: function() {
-        document.querySelectorAll('iframe').forEach(function(item) {
-            item.style.pointerEvents = null;
-        });
-    },
-
     collaborate: function({left, top, width, height, rowEnd, columnEnd}) {
         if (window.CoCreate && window.CoCreate.text) {
             let domTextEditor = this.resizeWidget.closest('[contenteditable]');
-            if (domTextEditor){
+            if (domTextEditor) {
                 if (left)
                     CoCreate.text.setStyle({ 
                         domTextEditor, target: this.resizeWidget, property: 'left', value: left + 'px' 
