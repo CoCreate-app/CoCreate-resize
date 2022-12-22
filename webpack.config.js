@@ -15,8 +15,7 @@ module.exports = {
         libraryExport: "default",
         library: "CoCreateResize",
         globalObject: "this",
-        // publicPath: 'https://server.cocreate.app/CoCreateJS/dist/'
-    },
+        },
 
     plugins: [
         new CleanWebpackPlugin(),
