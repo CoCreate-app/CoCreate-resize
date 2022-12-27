@@ -1,3 +1,11 @@
+## [1.3.6](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.3.5...v1.3.6) (2022-12-27)
+
+
+### Bug Fixes
+
+* bump dependencies ([5159d83](https://github.com/CoCreate-app/CoCreate-resize/commit/5159d830149b053adec4c4b549c9e53e92fbaa82))
+* modal href replaced with modal-src ([edc7b7e](https://github.com/CoCreate-app/CoCreate-resize/commit/edc7b7e859787b190c396142e9341ef08a9764ec))
+
 ## [1.3.5](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.3.4...v1.3.5) (2022-12-25)
 
 
