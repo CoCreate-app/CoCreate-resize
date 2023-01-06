@@ -1,3 +1,11 @@
+## [1.3.12](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.3.11...v1.3.12) (2023-01-06)
+
+
+### Bug Fixes
+
+* bump dependencies, worklow [@v3](https://github.com/v3) ([168f854](https://github.com/CoCreate-app/CoCreate-resize/commit/168f854705d402790288d50fa1954d0b10055d60))
+* edit in github btn styles ([92de02f](https://github.com/CoCreate-app/CoCreate-resize/commit/92de02f7cb6eb055e343ac367cf4302f665e4d3f))
+
 ## [1.3.11](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.3.10...v1.3.11) (2023-01-05)
 
 
