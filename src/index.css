@@ -1,7 +1,6 @@
 div[resize] {
     position: absolute;
     display: block;
-    z-index: 90;
 }
 div[resize]:hover {
     background-color: rgba(0, 0, 0, 0.1);
