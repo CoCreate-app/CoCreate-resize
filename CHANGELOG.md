@@ -1,3 +1,10 @@
+## [1.3.15](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.3.14...v1.3.15) (2023-01-10)
+
+
+### Bug Fixes
+
+* removed z-index from resize els ([4b017ea](https://github.com/CoCreate-app/CoCreate-resize/commit/4b017ea098011481191dddc1641b22b23e3bdbf1))
+
 ## [1.3.14](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.3.13...v1.3.14) (2023-01-10)
 
 
