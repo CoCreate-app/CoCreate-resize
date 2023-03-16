@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.3.21...v1.4.0) (2023-03-16)
+
+
+### Features
+
+* replaced get-value and set-value with a super charged version of CoCreate-events ([e2f3059](https://github.com/CoCreate-app/CoCreate-resize/commit/e2f305964f123046150056e49200e22598c7ac3f))
+
 ## [1.3.21](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.3.20...v1.3.21) (2023-02-01)
 
 
