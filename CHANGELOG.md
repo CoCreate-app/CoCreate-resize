@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.4.3...v1.4.4) (2023-04-11)
+
+
+### Bug Fixes
+
+* renamed domains to hosts ([ad342b1](https://github.com/CoCreate-app/CoCreate-resize/commit/ad342b111e2cf78ce8d997ee573892472336ddd3))
+
 ## [1.4.3](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.4.2...v1.4.3) (2023-03-30)
 
 
