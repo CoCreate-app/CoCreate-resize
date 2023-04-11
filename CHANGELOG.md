@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.4.4...v1.4.5) (2023-04-11)
+
+
+### Bug Fixes
+
+*  bump [@cocreate](https://github.com/cocreate) dependencies ([315b90b](https://github.com/CoCreate-app/CoCreate-resize/commit/315b90b500aa9e534ef9897421771d1222a8cde4))
+
 ## [1.4.4](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.4.3...v1.4.4) (2023-04-11)
 
 
