@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.4.6...v1.5.0) (2023-04-24)
+
+
+### Features
+
+* added pwa manifest ([cc59be1](https://github.com/CoCreate-app/CoCreate-resize/commit/cc59be1da333a69030948eae1e82c1ca2d918086))
+
 ## [1.4.6](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.4.5...v1.4.6) (2023-04-11)
 
 
