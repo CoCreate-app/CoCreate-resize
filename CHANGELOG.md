@@ -1,3 +1,11 @@
+## [1.5.3](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.2...v1.5.3) (2023-04-24)
+
+
+### Bug Fixes
+
+* updated worrkflows to v3 and node version 16 ([dfed7ec](https://github.com/CoCreate-app/CoCreate-resize/commit/dfed7eca4656dfaa6ab97602eeaf0decc365aba9))
+* workflow node version updated  16 ([3289c28](https://github.com/CoCreate-app/CoCreate-resize/commit/3289c286b8496028b8f351dbc733d0c28903acf2))
+
 ## [1.5.2](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.1...v1.5.2) (2023-04-24)
 
 
