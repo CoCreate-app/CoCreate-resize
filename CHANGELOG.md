@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.0...v1.5.1) (2023-04-24)
+
+
+### Bug Fixes
+
+* removed uglifyjs-webpack-plugin ([840a7b2](https://github.com/CoCreate-app/CoCreate-resize/commit/840a7b231b2043ccc94238627d9b31a8810b58c6))
+
 # [1.5.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.4.6...v1.5.0) (2023-04-24)
 
 
