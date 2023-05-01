@@ -1,3 +1,10 @@
+## [1.5.5](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.4...v1.5.5) (2023-05-01)
+
+
+### Bug Fixes
+
+* replace fontawesome with svg ([36abeca](https://github.com/CoCreate-app/CoCreate-resize/commit/36abeca4cddcf1b244440e507bd63cffd934b774))
+
 ## [1.5.4](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.3...v1.5.4) (2023-04-30)
 
 
