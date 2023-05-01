@@ -1,3 +1,10 @@
+## [1.5.7](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.6...v1.5.7) (2023-05-01)
+
+
+### Bug Fixes
+
+* replaced icon toggles with new svg ([cc01254](https://github.com/CoCreate-app/CoCreate-resize/commit/cc012547350e31016bd380588c54b26bad0772c8))
+
 ## [1.5.6](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.5...v1.5.6) (2023-05-01)
 
 
