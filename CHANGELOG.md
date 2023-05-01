@@ -1,3 +1,10 @@
+## [1.5.6](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.5...v1.5.6) (2023-05-01)
+
+
+### Bug Fixes
+
+* update manifest.json to manifest.webmanifest ([e80bdaa](https://github.com/CoCreate-app/CoCreate-resize/commit/e80bdaa809aa097d972c3fecc1cff41598f59312))
+
 ## [1.5.5](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.4...v1.5.5) (2023-05-01)
 
 
