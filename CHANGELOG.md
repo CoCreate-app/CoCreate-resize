@@ -1,3 +1,10 @@
+## [1.5.9](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.8...v1.5.9) (2023-05-10)
+
+
+### Bug Fixes
+
+* apikey renamed to key ([ad4a8ea](https://github.com/CoCreate-app/CoCreate-resize/commit/ad4a8ea9c9aa897d3b207b70d01fe2504b963893))
+
 ## [1.5.8](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.7...v1.5.8) (2023-05-10)
 
 
