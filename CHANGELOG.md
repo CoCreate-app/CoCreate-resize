@@ -1,3 +1,11 @@
+## [1.5.8](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.7...v1.5.8) (2023-05-10)
+
+
+### Bug Fixes
+
+* bump [@cocreate](https://github.com/cocreate) dependencies ([34fd01a](https://github.com/CoCreate-app/CoCreate-resize/commit/34fd01a79834d996717d56123d7b632f85ca92b5))
+* filter-sort icon ([9f4410b](https://github.com/CoCreate-app/CoCreate-resize/commit/9f4410bd243b094f622500a4a3f5a359dfcf8b9f))
+
 ## [1.5.7](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.6...v1.5.7) (2023-05-01)
 
 
