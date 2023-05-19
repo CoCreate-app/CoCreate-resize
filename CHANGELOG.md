@@ -1,3 +1,10 @@
+## [1.5.10](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.9...v1.5.10) (2023-05-19)
+
+
+### Bug Fixes
+
+* update packages to latest version. This commit updates various packages in the dependencies section of the package.json file to their latest published versions, thereby fixing multiple bugs and improving overall performance. ([332fe89](https://github.com/CoCreate-app/CoCreate-resize/commit/332fe89c44862594a5b992a5e93faa37ac7c1944))
+
 ## [1.5.9](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.8...v1.5.9) (2023-05-10)
 
 
