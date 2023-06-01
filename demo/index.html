@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <title>Resize | CoCreateJS</title>
 
-<head>
-    <title>Resize | CoCreateJS</title>
+        <!-- CoCreate Favicon -->
+        <link
+            rel="icon"
+            href="https://cdn.cocreate.app/favicon.ico"
+            type="image/ico"
+            sizes="16x16" />
+        <!-- CoCreate CSS CDN -->
+        <!--<link rel="stylesheet" href="https://cdn.cocreate.app/resize/latest/CoCreate-resize.min.css" type="text/css" />-->
+        <!-- Custom CSS -->
+        <style>
+            body {
+                height: 100vh;
+                margin: 0px;
+            }
 
-    <!-- CoCreate Favicon -->
-    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-    <!-- CoCreate CSS CDN -->
-    <!--<link rel="stylesheet" href="https://cdn.cocreate.app/resize/latest/CoCreate-resize.min.css" type="text/css" />-->
-    <!-- Custom CSS -->
-    <style>
-        body {
-            height: 100vh;
-            margin: 0px;
-        }
+            .resize1 {
+                top: 50px;
+                left: 50px;
+                width: 50px;
+                height: 50px;
+                padding: 0.5em;
+                position: absolute;
+                background: #dddddd;
+            }
 
-        .resize1 {
-            top: 50px;
-            left: 50px;
-            width: 50px;
-            height: 50px;
-            padding: 0.5em;
-            position: absolute;
-            background: #dddddd;
-        }
+            .resize3 {
+                top: 250px;
+                left: 250px;
+                width: 50px;
+                height: 50px;
+                padding: 0.5em;
+                position: absolute;
+                background: #dddddd;
+            }
+        </style>
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
 
-        .resize3 {
-            top: 250px;
-            left: 250px;
-            width: 50px;
-            height: 50px;
-            padding: 0.5em;
-            position: absolute;
-            background: #dddddd;
-        }
-    </style>
-    <link rel="manifest" href="/manifest.webmanifest">
-</head>
-
-<body>
-
-    <!--<div class="">-->
+    <body>
+        <!--<div class="">-->
         <!-- <div class="position:fixed height:100vh width:300px right:0px background:whitesmoke" resizable>
             <div resize="left"></div>
             <div resize="right"></div>
             <div resize="top"></div>
             <div resize="bottom"></div>
         </div> -->
-        
+
         <div class="resize resize1" resizable>
             <div resize="left"></div>
             <div resize="right"></div>
             <div resize="top"></div>
             <div resize="bottom"></div>
         </div>
-    <!--</div>-->
+        <!--</div>-->
 
-
-    <!-- <script src="../dist/CoCreate-resize.js"></script> -->
-    <script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
-</body>
-
+        <!-- <script src="../dist/CoCreate-resize.js"></script> -->
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+    </body>
 </html>
