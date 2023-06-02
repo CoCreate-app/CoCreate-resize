@@ -1,3 +1,11 @@
+## [1.5.12](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.11...v1.5.12) (2023-06-02)
+
+
+### Bug Fixes
+
+* format demo html ([fc11fae](https://github.com/CoCreate-app/CoCreate-resize/commit/fc11fae7d239c8418542bf5d05161b29ab6d3804))
+* Update dependencies versions for [@cocreate](https://github.com/cocreate) libraries ([e9a57cc](https://github.com/CoCreate-app/CoCreate-resize/commit/e9a57ccbb37ea3f54e1ea63f134321726903cf02))
+
 ## [1.5.11](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.10...v1.5.11) (2023-05-21)
 
 
