@@ -1,3 +1,11 @@
+## [1.5.14](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.13...v1.5.14) (2023-06-04)
+
+
+### Bug Fixes
+
+* replaced secert GITHUB_TOKEN with GITHUB ([481129a](https://github.com/CoCreate-app/CoCreate-resize/commit/481129a640588b7e8ef184cf95f0be31a4ca6dce))
+* Update dependencies versions for [@cocreate](https://github.com/cocreate) libraries ([cefb993](https://github.com/CoCreate-app/CoCreate-resize/commit/cefb9935a1af59a4fef5b786b36fa3e35d67430b))
+
 ## [1.5.13](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.12...v1.5.13) (2023-06-04)
 
 
