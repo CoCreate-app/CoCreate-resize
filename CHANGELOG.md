@@ -1,3 +1,10 @@
+## [1.5.13](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.12...v1.5.13) (2023-06-04)
+
+
+### Bug Fixes
+
+* **semantic-release:** worklow error solved by running node version 14 ([3e24b57](https://github.com/CoCreate-app/CoCreate-resize/commit/3e24b5774081e4baa89019eb791a1498e8d02668))
+
 ## [1.5.12](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.11...v1.5.12) (2023-06-02)
 
 
