@@ -1,3 +1,10 @@
+## [1.5.20](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.19...v1.5.20) (2023-06-11)
+
+
+### Bug Fixes
+
+* @cocreate/cli moved to dependencies ([95c40a9](https://github.com/CoCreate-app/CoCreate-resize/commit/95c40a9d704c886b1c7488452d23bb25888f9830))
+
 ## [1.5.19](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.18...v1.5.19) (2023-06-11)
 
 
