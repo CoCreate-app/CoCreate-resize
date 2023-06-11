@@ -1,3 +1,10 @@
+## [1.5.18](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.17...v1.5.18) (2023-06-11)
+
+
+### Bug Fixes
+
+* renamed hosts to host. the value can be a string or an array of strings ([840999c](https://github.com/CoCreate-app/CoCreate-resize/commit/840999ce9b3fda62ea807289038c4a5b2bbb1bc4))
+
 ## [1.5.17](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.16...v1.5.17) (2023-06-10)
 
 
