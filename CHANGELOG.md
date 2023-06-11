@@ -1,3 +1,11 @@
+## [1.5.24](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.23...v1.5.24) (2023-06-11)
+
+
+### Bug Fixes
+
+* testing workflow ([3da5366](https://github.com/CoCreate-app/CoCreate-resize/commit/3da536651ee7d6015bd864ff3126d8b818a7132e))
+* testing workflow ([646d2bd](https://github.com/CoCreate-app/CoCreate-resize/commit/646d2bda6e1b0357a26846035214405470cce388))
+
 ## [1.5.23](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.22...v1.5.23) (2023-06-11)
 
 
