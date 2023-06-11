@@ -1,3 +1,10 @@
+## [1.5.21](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.20...v1.5.21) (2023-06-11)
+
+
+### Bug Fixes
+
+* postintall error ([6c776d5](https://github.com/CoCreate-app/CoCreate-resize/commit/6c776d5fdc8bd1cf7a86bfe2aa98d055ef07029c))
+
 ## [1.5.20](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.19...v1.5.20) (2023-06-11)
 
 
