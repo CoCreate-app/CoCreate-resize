@@ -204,25 +204,23 @@
                 </span>
             </form>
 
-            <!--<input type="hidden" template_id="main-menu" filter-name="menu-position" filter-value="3,4" filter-value-type="number" filter-operator="nin">-->
-            <!--<div template_id="main-menu" filter-name="menu-position" filter-value="0" filter-value-type="number" filter-operator="ne"></div>-->
             <div class="padding-right:5px padding-bottom:5px">
                 <!-- Fetch and Render-->
                 <ul
                     class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
                     <div
-                        fetch-collection="modules"
+                        collection="modules"
                         filter-sort-name="main-menu-position"
                         filter-sort-direction="asc"
                         filter-name="main-menu-position"
                         filter-value="0"
                         filter-value-type="number"
                         filter-operator="$ne"
-                        template_id="main-menu">
+                        render-selector="[template]">
                         <!-- Template -->
                         <li
-                            class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover"
-                            template_id="main-menu"
+                            template
+                            class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover"
                             document_id="{{document._id}}">
                             <input
                                 type="hidden"
@@ -402,17 +400,15 @@
 
         <!-- Main Content -->
         <main class="padding:10px" content_id="content">
-            <!--<div class="domEditor main-height" name="cards1" collection="test" pass_id="me1234">-->
-
             <div
                 class="display:grid grid-auto-rows:50px gap:10px grid-template-columns:repeat(auto-fill,minmax(50px,1fr))"
                 dnd-group-name="dashboard"
-                fetch-collection="files"
+                collection="files"
                 filter-limit="20"
-                template_id="card"
+                render-selector="[template]"
                 droppable="true">
                 <div
-                    template_id="card"
+                    template
                     class="card position:relative template display:flex padding:20px align-items:center grid-column-end:span_6 grid-row-end:span_2"
                     eid="id1"
                     draggable="tru"
@@ -424,8 +420,8 @@
                         <div class="display:flex align-items:center">
                             <h2>
                                 $<span
-                                    fetch-collection=""
-                                    fetch-document
+                                    collection=""
+                                    document
                                     filter-name="total"
                                     chart-operator="sum"
                                     >4000</span
