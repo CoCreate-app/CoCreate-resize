@@ -13,8 +13,8 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
+            array="files"
+            object="637bc8fe91249e639db315d9"
             name="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
@@ -117,8 +117,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="datatable"
@@ -137,8 +137,8 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
+                            pass-array=""
+                            pass-object=""
                             pass-name=""
                             pass_to="code-editor"></div>
                     </a>
@@ -154,8 +154,8 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
+                            pass-array=""
+                            pass-object=""
                             pass-name=""
                             pass_to="builder"></div>
                     </a>
@@ -165,8 +165,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection=""
-                        document_id=""
+                        array=""
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -192,8 +192,8 @@
                     <a
                         actions="pass, openModal"
                         pass_to="render"
-                        collection="website-pages"
-                        document_id=""
+                        array="website-pages"
+                        object=""
                         pass-name="src"
                         modal-width="900px"
                         modal-color="#229954">
@@ -209,7 +209,7 @@
                 <ul
                     class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
                     <div
-                        collection="modules"
+                        array="modules"
                         filter-sort-name="main-menu-position"
                         filter-sort-direction="asc"
                         filter-name="main-menu-position"
@@ -221,88 +221,88 @@
                         <li
                             template
                             class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover"
-                            document_id="{{document._id}}">
+                            object="{{object._id}}">
                             <input
                                 type="hidden"
-                                collection="files"
-                                document_id="{{document.main-menu-primary}}"
+                                array="files"
+                                object="{{object.main-menu-primary}}"
                                 name="path"
-                                input-selector="#a{{document._id}}"
+                                input-selector="#a{{object._id}}"
                                 input-key="primary-url" />
                             <a
                                 actions="pass, openModal"
-                                id="a{{document._id}}"
+                                id="a{{object._id}}"
                                 href="..{{primary-url}}"
-                                modal-width="{{document.main-modal-primary-width}}"
-                                modal-color="{{document.main-modal-color}}"
+                                modal-width="{{object.main-modal-primary-width}}"
+                                modal-color="{{object.main-modal-color}}"
                                 class="display:inline-block">
                                 <span
                                     class="display:inline-block width:50px text-align:center"
-                                    document_id="{{document._id}}"
-                                    collection="modules"
+                                    object="{{object._id}}"
+                                    array="modules"
                                     name="icon"
                                     value="icon"></span>
                                 <span
-                                    collection="modules"
-                                    document_id="{{document._id}}"
+                                    array="modules"
+                                    object="{{object._id}}"
                                     name="name"></span>
                                 <div
-                                    pass-collection="module_activities"
+                                    pass-array="module_activities"
                                     pass-filter-name="module_id"
-                                    pass-filter-value="{{document._id}}"
+                                    pass-filter-value="{{object._id}}"
                                     pass_to="datatable"></div>
                                 <div
-                                    pass-collection="module_activities"
-                                    pass-value="{{document._id}}"
+                                    pass-array="module_activities"
+                                    pass-value="{{object._id}}"
                                     pass_to="module_id"></div>
                                 <div
-                                    pass-collection="files"
-                                    pass-document_id="{{document.main-menu-secondary}}"
+                                    pass-array="files"
+                                    pass-object="{{object.main-menu-secondary}}"
                                     pass-name="src"
                                     pass_to="form"></div>
                                 <div
-                                    pass-collection="files"
-                                    pass-document_id="{{document.main-menu-primary}}"
+                                    pass-array="files"
+                                    pass-object="{{object.main-menu-primary}}"
                                     pass-name="src"
                                     pass_to="render"></div>
                                 <div
-                                    pass-value="{{document._id}}"
-                                    pass-filter-value="{{document._id}}"
+                                    pass-value="{{object._id}}"
+                                    pass-filter-value="{{object._id}}"
                                     pass_to="module-form"></div>
                             </a>
                             <div
                                 class="float:right width:50px text-align:center">
                                 <input
                                     type="hidden"
-                                    collection="files"
-                                    document_id="{{document.main-menu-secondary}}"
+                                    array="files"
+                                    object="{{object.main-menu-secondary}}"
                                     name="path"
-                                    input-selector="#a{{document._id}}"
+                                    input-selector="#a{{object._id}}"
                                     input-key="secondary-url" />
                                 <a
                                     actions="pass, openModal"
-                                    id="a1{{document._id}}"
+                                    id="a1{{object._id}}"
                                     href="..{{secondary-url}}"
-                                    modal-width="{{document.main-menu-secondary-width}}"
-                                    modal-color="{{document.main-menu-secondary-color}}">
+                                    modal-width="{{object.main-menu-secondary-width}}"
+                                    modal-color="{{object.main-menu-secondary-color}}">
                                     <i
                                         class="height:16px fill:#505050"
                                         src="/assets/svg/plus.svg"></i>
                                     <div
-                                        pass-value="{{document._id}}"
-                                        pass-filter-value="{{document._id}}"
+                                        pass-value="{{object._id}}"
+                                        pass-filter-value="{{object._id}}"
                                         pass_to="module_id"></div>
                                     <div
-                                        pass-collection="files"
-                                        pass-document_id="{{document.main-menu-secondary}}"
+                                        pass-array="files"
+                                        pass-object="{{object.main-menu-secondary}}"
                                         pass-name="src"
                                         pass_to="render"></div>
                                     <div
-                                        pass-document_id="{{document._id}}"
+                                        pass-object="{{object._id}}"
                                         pass_to="module-form"></div>
                                     <div
                                         pass_to="form-fields"
-                                        pass-document_id=""></div>
+                                        pass-object=""></div>
                                 </a>
                             </div>
                         </li>
@@ -326,8 +326,8 @@
                                 src="/assets/svg/cogs.svg"></i
                         ></span>
                         <div
-                            pass-collection="files"
-                            pass-document_id="60ddfdc014b5ab0c2dd2fe18"
+                            pass-array="files"
+                            pass-object="60ddfdc014b5ab0c2dd2fe18"
                             pass-name="src"
                             pass_to="render"></div>
                     </a>
@@ -343,8 +343,8 @@
                                 src="/assets/svg/project-diagram.svg"></i
                         ></span>
                         <div
-                            pass-collection="files"
-                            pass-document_id="60ddfdbf14b5ab0c2dd2fe08"
+                            pass-array="files"
+                            pass-object="60ddfdbf14b5ab0c2dd2fe08"
                             pass-name="src"
                             pass_to="render"></div>
                     </a>
@@ -360,8 +360,8 @@
                                 src="/assets/svg/shapes.svg"></i
                         ></span>
                         <div
-                            pass-collection="files"
-                            pass-document_id="60ddfdc014b5ab0c2dd2fe0b"
+                            pass-array="files"
+                            pass-object="60ddfdc014b5ab0c2dd2fe0b"
                             pass-name="src"
                             pass_to="render"></div>
                     </a>
@@ -377,8 +377,8 @@
                                 src="/assets/svg/folder.svg"></i
                         ></span>
                         <div
-                            pass-collection="files"
-                            pass-document_id="60ddfdc014b5ab0c2dd2fe15"
+                            pass-array="files"
+                            pass-object="60ddfdc014b5ab0c2dd2fe15"
                             pass-name="src"
                             pass_to="render"></div>
                     </a>
@@ -403,7 +403,7 @@
             <div
                 class="display:grid grid-auto-rows:50px gap:10px grid-template-columns:repeat(auto-fill,minmax(50px,1fr))"
                 dnd-group-name="dashboard"
-                collection="files"
+                array="files"
                 filter-limit="20"
                 render-selector="[template]"
                 droppable="true">
@@ -420,7 +420,7 @@
                         <div class="display:flex align-items:center">
                             <h2>
                                 $<span
-                                    collection=""
+                                    array=""
                                     document
                                     filter-name="total"
                                     chart-operator="sum"
@@ -462,7 +462,7 @@
                     <i
                         class="height:20px fill:#505050"
                         src="/assets/svg/plus.svg"></i>
-                    <div pass_to="form-fields" pass-document_id=""></div>
+                    <div pass_to="form-fields" pass-object=""></div>
                     <div
                         pass_id="module-form"
                         pass-value=""
@@ -470,8 +470,8 @@
                         pass_to="module_id"></div>
                     <div
                         pass_id="form"
-                        pass-collection=""
-                        pass-document_id=""
+                        pass-array=""
+                        pass-object=""
                         pass-name=""
                         pass_to="render"></div>
                 </a>
