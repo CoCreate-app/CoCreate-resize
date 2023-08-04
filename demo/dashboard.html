@@ -15,7 +15,7 @@
             href="../index.css"
             array="files"
             object="637bc8fe91249e639db315d9"
-            name="src"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -139,7 +139,7 @@
                             pass_id="render"
                             pass-array=""
                             pass-object=""
-                            pass-name=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -156,7 +156,7 @@
                             pass_id="render"
                             pass-array=""
                             pass-object=""
-                            pass-name=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -194,7 +194,7 @@
                         pass_to="render"
                         array="website-pages"
                         object=""
-                        pass-name="src"
+                        pass-key="src"
                         modal-width="900px"
                         modal-color="#229954">
                         <i
@@ -210,9 +210,9 @@
                     class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
                     <div
                         array="modules"
-                        filter-sort-name="main-menu-position"
+                        filter-sort-key="main-menu-position"
                         filter-sort-direction="asc"
-                        filter-name="main-menu-position"
+                        filter-key="main-menu-position"
                         filter-value="0"
                         filter-value-type="number"
                         filter-operator="$ne"
@@ -226,7 +226,7 @@
                                 type="hidden"
                                 array="files"
                                 object="{{object.main-menu-primary}}"
-                                name="path"
+                                key="path"
                                 input-selector="#a{{object._id}}"
                                 input-key="primary-url" />
                             <a
@@ -240,15 +240,15 @@
                                     class="display:inline-block width:50px text-align:center"
                                     object="{{object._id}}"
                                     array="modules"
-                                    name="icon"
+                                    key="icon"
                                     value="icon"></span>
                                 <span
                                     array="modules"
                                     object="{{object._id}}"
-                                    name="name"></span>
+                                    key="name"></span>
                                 <div
                                     pass-array="module_activities"
-                                    pass-filter-name="module_id"
+                                    pass-filter-key="module_id"
                                     pass-filter-value="{{object._id}}"
                                     pass_to="datatable"></div>
                                 <div
@@ -258,12 +258,12 @@
                                 <div
                                     pass-array="files"
                                     pass-object="{{object.main-menu-secondary}}"
-                                    pass-name="src"
+                                    pass-key="src"
                                     pass_to="form"></div>
                                 <div
                                     pass-array="files"
                                     pass-object="{{object.main-menu-primary}}"
-                                    pass-name="src"
+                                    pass-key="src"
                                     pass_to="render"></div>
                                 <div
                                     pass-value="{{object._id}}"
@@ -276,7 +276,7 @@
                                     type="hidden"
                                     array="files"
                                     object="{{object.main-menu-secondary}}"
-                                    name="path"
+                                    key="path"
                                     input-selector="#a{{object._id}}"
                                     input-key="secondary-url" />
                                 <a
@@ -295,7 +295,7 @@
                                     <div
                                         pass-array="files"
                                         pass-object="{{object.main-menu-secondary}}"
-                                        pass-name="src"
+                                        pass-key="src"
                                         pass_to="render"></div>
                                     <div
                                         pass-object="{{object._id}}"
@@ -328,7 +328,7 @@
                         <div
                             pass-array="files"
                             pass-object="60ddfdc014b5ab0c2dd2fe18"
-                            pass-name="src"
+                            pass-key="src"
                             pass_to="render"></div>
                     </a>
                     <a
@@ -345,7 +345,7 @@
                         <div
                             pass-array="files"
                             pass-object="60ddfdbf14b5ab0c2dd2fe08"
-                            pass-name="src"
+                            pass-key="src"
                             pass_to="render"></div>
                     </a>
                     <a
@@ -362,7 +362,7 @@
                         <div
                             pass-array="files"
                             pass-object="60ddfdc014b5ab0c2dd2fe0b"
-                            pass-name="src"
+                            pass-key="src"
                             pass_to="render"></div>
                     </a>
                     <a
@@ -379,7 +379,7 @@
                         <div
                             pass-array="files"
                             pass-object="60ddfdc014b5ab0c2dd2fe15"
-                            pass-name="src"
+                            pass-key="src"
                             pass_to="render"></div>
                     </a>
                     <a
@@ -402,7 +402,7 @@
         <main class="padding:10px" content_id="content">
             <div
                 class="display:grid grid-auto-rows:50px gap:10px grid-template-columns:repeat(auto-fill,minmax(50px,1fr))"
-                dnd-group-name="dashboard"
+                dnd-group-key="dashboard"
                 array="files"
                 filter-limit="20"
                 render-selector="[template]"
@@ -415,20 +415,20 @@
                     resizable>
                     <!-- dashboard template-->
                     <div class="flex-grow:1 padding-right:20px">
-                        <h2 name="name">Visits</h2>
-                        <p name="description">Total visits today</p>
+                        <h2 key="name">Visits</h2>
+                        <p key="description">Total visits today</p>
                         <div class="display:flex align-items:center">
                             <h2>
                                 $<span
                                     array=""
                                     document
-                                    filter-name="total"
+                                    filter-key="total"
                                     chart-operator="sum"
                                     >4000</span
                                 >
                             </h2>
                             <div
-                                filter-name="status"
+                                filter-key="status"
                                 filter-value="completed"></div>
                             <!--<i class="fas fa-chart-line color:green font-size:16px padding:0px_15px"></i>-->
                             <span
@@ -472,7 +472,7 @@
                         pass_id="form"
                         pass-array=""
                         pass-object=""
-                        pass-name=""
+                        pass-key=""
                         pass_to="render"></div>
                 </a>
             </button>
