@@ -1,3 +1,20 @@
+# [1.6.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.29...v1.6.0) (2023-08-16)
+
+
+### Bug Fixes
+
+* crud attributes renamed ([9c36081](https://github.com/CoCreate-app/CoCreate-resize/commit/9c360816d85e2968d7cc176c1347f6793aedcbad))
+* replace -target -selector ([90be48d](https://github.com/CoCreate-app/CoCreate-resize/commit/90be48d49e3c6ad3462877c63bf3e75359444929))
+* updated fetch-limit to filter-limit ([aebe4ca](https://github.com/CoCreate-app/CoCreate-resize/commit/aebe4ca94e42815a1a8b48dc5900b81ab7bcc8ac))
+* webpack.config and package.json make use of mode=production instead of process.env ([68d2fa6](https://github.com/CoCreate-app/CoCreate-resize/commit/68d2fa60c6865775ce2157f051cc351e89d5eaa1))
+
+
+### Features
+
+* name attribute and variable renamed to key ([2cd04d0](https://github.com/CoCreate-app/CoCreate-resize/commit/2cd04d01384c4073c52a1cb86752440c263bc6d0))
+* renamed CRUD attributes and params ([bed55be](https://github.com/CoCreate-app/CoCreate-resize/commit/bed55bec7c1f10eed4a5242f4c837ca5ee3b9e69))
+* update template_id to render-selector attribute. update filter attributes to filter selector-attributes ([6df6cea](https://github.com/CoCreate-app/CoCreate-resize/commit/6df6ceab240b56ce3ea7c61f27412769bef33582))
+
 ## [1.5.29](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.5.28...v1.5.29) (2023-06-14)
 
 
