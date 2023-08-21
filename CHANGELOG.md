@@ -1,3 +1,12 @@
+## [1.7.1](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.7.0...v1.7.1) (2023-08-21)
+
+
+### Bug Fixes
+
+* /dist/CoCreate.js updated to https://CoCreate.app/dist/CoCreate.js ([dde1d75](https://github.com/CoCreate-app/CoCreate-resize/commit/dde1d75a4c8bf5e88dc2d87732a12a3e8a22317d))
+* replace cdn with /dist ([5251f77](https://github.com/CoCreate-app/CoCreate-resize/commit/5251f7713a0ee66e584b28802aceadf71bb03ed7))
+* update file uploader ([939922e](https://github.com/CoCreate-app/CoCreate-resize/commit/939922e89226db646491eeff7afc59e516ca4dbd))
+
 # [1.7.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.6.0...v1.7.0) (2023-08-17)
 
 
