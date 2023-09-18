@@ -1,3 +1,11 @@
+## [1.8.2](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.8.1...v1.8.2) (2023-09-18)
+
+
+### Bug Fixes
+
+*  Add path and pathname ([cfe4158](https://github.com/CoCreate-app/CoCreate-resize/commit/cfe4158856e4d1d7c773526c5aecb10899ffa316))
+* Update CoCreate depndencies to latest versions ([7207b20](https://github.com/CoCreate-app/CoCreate-resize/commit/7207b205c49f529c63b5b64e4fe67354b4c56e2e))
+
 ## [1.8.1](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.8.0...v1.8.1) (2023-08-21)
 
 
