@@ -1,3 +1,11 @@
+## [1.8.7](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.8.6...v1.8.7) (2023-11-03)
+
+
+### Bug Fixes
+
+* favicon.ico path ([937ba2d](https://github.com/CoCreate-app/CoCreate-resize/commit/937ba2d99005ed55082e471c60d9b12fe7b1e337))
+* update dependencies to the lates versions ([94dd09e](https://github.com/CoCreate-app/CoCreate-resize/commit/94dd09eab81169294d0c68f13279d6429b26f25d))
+
 ## [1.8.6](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.8.5...v1.8.6) (2023-10-25)
 
 
