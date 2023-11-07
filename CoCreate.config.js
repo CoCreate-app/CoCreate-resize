@@ -12,8 +12,7 @@ module.exports = {
                 "pathname": "/docs/resize/index.html",
                 "src": "{{./docs/index.html}}",
                 "host": [
-                    "*",
-                    "general.cocreate.app"
+                    "*"
                 ],
                 "directory": "resize",
                 "content-type": "{{content-type}}",
