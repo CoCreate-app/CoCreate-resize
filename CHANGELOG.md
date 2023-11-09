@@ -1,3 +1,11 @@
+## [1.8.8](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.8.7...v1.8.8) (2023-11-09)
+
+
+### Bug Fixes
+
+* meta name typo ([65949e5](https://github.com/CoCreate-app/CoCreate-resize/commit/65949e5dfae60eef6e575c87577faa71efceb3d4))
+* update host ([26388aa](https://github.com/CoCreate-app/CoCreate-resize/commit/26388aa6352ec557678729f46a8f61fb2ada899c))
+
 ## [1.8.7](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.8.6...v1.8.7) (2023-11-03)
 
 
