@@ -1,3 +1,16 @@
+# [1.10.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.9.0...v1.10.0) (2023-11-25)
+
+
+### Bug Fixes
+
+* pass attributes renamed to state ([b8cd8ce](https://github.com/CoCreate-app/CoCreate-resize/commit/b8cd8ceeaa360cfb0a7e6125d26b527c803cdc16))
+* update nav, edit button and css path ([ffcca5d](https://github.com/CoCreate-app/CoCreate-resize/commit/ffcca5d915c07c43e08426f638815ab7197b0b8f))
+
+
+### Features
+
+* upgrade dependencies for latest features and fixes ([fe6e5d5](https://github.com/CoCreate-app/CoCreate-resize/commit/fe6e5d524bd2a38334dd2d05bc34adb497839d62))
+
 # [1.9.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.8.9...v1.9.0) (2023-11-19)
 
 
