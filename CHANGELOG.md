@@ -1,3 +1,11 @@
+## [1.11.2](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.11.1...v1.11.2) (2024-06-12)
+
+
+### Bug Fixes
+
+* bump cocreate dependencies ([16c7627](https://github.com/CoCreate-app/CoCreate-resize/commit/16c7627f4483f83e7ea2f2cccdc4dbe3881a43d7))
+* svg icon class ([cc82ad0](https://github.com/CoCreate-app/CoCreate-resize/commit/cc82ad0731a977092734a1ec4f27530731b97559))
+
 ## [1.11.1](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.11.0...v1.11.1) (2024-04-29)
 
 
