@@ -265,8 +265,9 @@ CoCreateResize.prototype = {
         if (width < 10)
             return;
         if (!this.isGrid) {
+            this.resizeWidget.style.left = '';
             this.resizeWidget.style.right = right + 'px';
-            this.collaborate({ right, width })
+            this.collaborate({ left, width })
         }
 
         this.resizeWidget.style.width = width + 'px';
