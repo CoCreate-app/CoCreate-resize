@@ -1,3 +1,18 @@
+# [1.12.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.11.2...v1.12.0) (2024-11-04)
+
+
+### Bug Fixes
+
+* nested find  html[contenteditable] ([19ca15d](https://github.com/CoCreate-app/CoCreate-resize/commit/19ca15d92dbf75bef926dbeaffd8639b505fd2f1))
+* pretier.config.js and file formating ([12245ee](https://github.com/CoCreate-app/CoCreate-resize/commit/12245ee48c2c8812c8295c4997b2ceb68e76c771))
+* replaced startLeft With startRight when resizing left ([e8dd32f](https://github.com/CoCreate-app/CoCreate-resize/commit/e8dd32f51edad4859cae1a5f2798bfa9dbf47587))
+
+
+### Features
+
+* add prettier.config.js and format files ([c7f023d](https://github.com/CoCreate-app/CoCreate-resize/commit/c7f023d0d1b203a9629104e7cadc9dbe4502a6f0))
+* add prettier.config.js and format files ([653bad3](https://github.com/CoCreate-app/CoCreate-resize/commit/653bad30911ff4c2091fa64dece719a85451b697))
+
 ## [1.11.2](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.11.1...v1.11.2) (2024-06-12)
 
 
