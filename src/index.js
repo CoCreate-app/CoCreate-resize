@@ -603,7 +603,6 @@ function autoResizeElement(element) {
 	element.style.height = "auto";
 
 	let scrollHeight;
-	console.log("test");
 	if (element.contentDocument) {
 		scrollHeight = element.contentDocument.body.scrollHeight;
 	} else {
