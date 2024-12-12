@@ -669,6 +669,8 @@ function initAutoHeight(element) {
 	}
 }
 
+initAutoHeight();
+
 observer.init({
 	name: "CoCreateResize",
 	observe: ["addedNodes"],
