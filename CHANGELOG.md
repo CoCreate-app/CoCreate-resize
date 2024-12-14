@@ -1,3 +1,16 @@
+# [1.13.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.12.0...v1.13.0) (2024-12-14)
+
+
+### Bug Fixes
+
+* initAutoHeight() execution onload ([e1b8af3](https://github.com/CoCreate-app/CoCreate-resize/commit/e1b8af3b6b44beb2584791d21eea5e2ba478881d))
+* removed test console.log ([6d1d5e3](https://github.com/CoCreate-app/CoCreate-resize/commit/6d1d5e3087c983d1088cc734cdad5ed62393fc60))
+
+
+### Features
+
+* auto resize handled  using height="auto" ([5156022](https://github.com/CoCreate-app/CoCreate-resize/commit/515602267b383f336e5a44adaae385f964c97ab0))
+
 # [1.12.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.11.2...v1.12.0) (2024-11-04)
 
 
