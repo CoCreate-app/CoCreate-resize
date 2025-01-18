@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.13.0...v1.13.1) (2025-01-18)
+
+
+### Bug Fixes
+
+* update filter-query-key ([572a619](https://github.com/CoCreate-app/CoCreate-resize/commit/572a6194d8faaa45617dad046004e0a1139d0058))
+
 # [1.13.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.12.0...v1.13.0) (2024-12-14)
 
 
