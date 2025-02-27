@@ -599,19 +599,24 @@ CoCreateResize.prototype = {
 
 // Function to auto-resize the element based on its content
 function autoResizeElement(element) {
-	// Reset height to auto to calculate scrollHeight correctly
-	element.style.height = "auto";
+	if (!element) return;
 
-	let scrollHeight;
-	if (element.contentDocument) {
-		scrollHeight = element.contentDocument.body.scrollHeight;
-	} else {
-		// For other elements, get scrollHeight directly
-		scrollHeight = element.scrollHeight;
+	if (element.tagName === "TEXTAREA") {
+		element.style.height = "auto";
+
+		let scrollHeight;
+		if (element.contentDocument) {
+			scrollHeight = element.contentDocument.body.scrollHeight;
+		} else {
+			// For other elements, get scrollHeight directly
+			scrollHeight = element.scrollHeight;
+		}
+
+		// Set the height of the element to the calculated scrollHeight
+		element.style.height = scrollHeight + "px";
+	} else if (element.tagName === "SELECT" && element.multiple) {
+		element.size = Math.max(element.options.length, 1); // Ensure at least 1 visible option
 	}
-
-	// Set the height of the element to the calculated scrollHeight
-	element.style.height = scrollHeight + "px";
 }
 
 // Observe the resize of the element
@@ -630,9 +635,9 @@ function initAutoHeight(element) {
 		!(element instanceof HTMLCollection) &&
 		!(element instanceof NodeList) &&
 		!Array.isArray(element)
-	)
+	) {
 		element = [element];
-	else if (!element) {
+	} else if (!element) {
 		element = document.querySelectorAll('[height="auto"]');
 
 		// Add event listener for iframes on load
@@ -647,25 +652,28 @@ function initAutoHeight(element) {
 			false
 		);
 
-		if (element.contentDocument) {
-			// Create a MutationObserver for changes within the iframe's body
-			const observer = new MutationObserver(autoResizeElement);
-			observer.observe(iframeDocument.body, {
-				childList: true,
-				subtree: true
-			});
+		// if (element.contentDocument) {
+		// 	// Create a MutationObserver for changes within the iframe's body
+		// 	const observer = new MutationObserver(autoResizeElement);
+		// 	observer.observe(iframeDocument.body, {
+		// 		childList: true,
+		// 		subtree: true
+		// 	});
 
-			// Handle iframe document changes (e.g., if src or srcdoc is modified)
-			element.addEventListener("load", () => {
-				observer.disconnect(); // Disconnect the previous observer
-				observeIframeContent(); // Reinitialize the observer on new document
-			});
-		}
+		// 	// Handle iframe document changes (e.g., if src or srcdoc is modified)
+		// 	element.addEventListener("load", () => {
+		// 		observer.disconnect(); // Disconnect the previous observer
+		// 		observeIframeContent(); // Reinitialize the observer on new document
+		// 	});
+		// }
 	}
 
 	for (let i = 0; i < element.length; i++) {
+		if (element[i].tagName === "TEXTAREA") {
+			element[i].rows = 1;
+		}
 		autoResizeElement(element[i]);
-		observeElementResize(element[i]); // Observe resize changes
+		observeElementResize(element[i]); // Observe resize changes.
 	}
 }
 
@@ -686,6 +694,15 @@ observer.init({
 	selector: "[height='auto']",
 	callback: function (mutation) {
 		initAutoHeight(mutation.target);
+	}
+});
+
+observer.init({
+	name: "CoCreateResize",
+	observe: ["addedNodes"],
+	selector: "[height='auto'] option",
+	callback: function (mutation) {
+		autoResizeElement(mutation.target.parentElement);
 	}
 });
 
