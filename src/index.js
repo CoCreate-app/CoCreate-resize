@@ -681,7 +681,7 @@ initAutoHeight();
 
 observer.init({
 	name: "CoCreateResize",
-	observe: ["addedNodes"],
+	types: ["addedNodes"],
 	selector: "[resizable]:not([resizable='false'])",
 	callback: function (mutation) {
 		coCreateResize.initElement(mutation.target);
@@ -690,7 +690,7 @@ observer.init({
 
 observer.init({
 	name: "CoCreateResize",
-	observe: ["addedNodes"],
+	types: ["addedNodes"],
 	selector: "[height='auto']",
 	callback: function (mutation) {
 		initAutoHeight(mutation.target);
@@ -699,7 +699,7 @@ observer.init({
 
 observer.init({
 	name: "CoCreateResize",
-	observe: ["addedNodes"],
+	types: ["addedNodes"],
 	selector: "[height='auto'] option",
 	callback: function (mutation) {
 		autoResizeElement(mutation.target.parentElement);
