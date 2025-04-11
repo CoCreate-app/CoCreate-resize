@@ -1,3 +1,15 @@
+# [1.14.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.13.1...v1.14.0) (2025-04-11)
+
+
+### Bug Fixes
+
+* update observer obseve param to type and and attributeName to attributeFilter ([1bb5e14](https://github.com/CoCreate-app/CoCreate-resize/commit/1bb5e14ae342a0e836bce36551bb4b80c4cd9cba))
+
+
+### Features
+
+* auto height handling for select fields ([11a7bc9](https://github.com/CoCreate-app/CoCreate-resize/commit/11a7bc9b6832361dcc50910ee742693ef9606fbd))
+
 ## [1.13.1](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.13.0...v1.13.1) (2025-01-18)
 
 
