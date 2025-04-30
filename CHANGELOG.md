@@ -1,3 +1,13 @@
+## [1.14.1](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.14.0...v1.14.1) (2025-04-30)
+
+
+### Bug Fixes
+
+* added css-loader ([778f474](https://github.com/CoCreate-app/CoCreate-resize/commit/778f4747c380bf8bc55b702ae1c1be712a967f6e))
+* update query attributes ([1c2c485](https://github.com/CoCreate-app/CoCreate-resize/commit/1c2c4856b6a61ec8036878fa4dbfdde408b1d0ec))
+* updated cocreate modules versions ([b52c58d](https://github.com/CoCreate-app/CoCreate-resize/commit/b52c58d497dfcc721dd09c5be26343626bb1a73a))
+* webpack.config and devdependencies ([f600023](https://github.com/CoCreate-app/CoCreate-resize/commit/f60002306be8e7af9b1675d823edff5192f6f22d))
+
 # [1.14.0](https://github.com/CoCreate-app/CoCreate-resize/compare/v1.13.1...v1.14.0) (2025-04-11)
 
 
